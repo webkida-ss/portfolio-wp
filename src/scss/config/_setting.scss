@@ -9,8 +9,10 @@ $dark-gray: #3e3e3e;
 $white: #ffffff;
 $red: #e81919;
 $red-active: #f1b4b4;
-$blue: #3f51b5;
-$blue-active: #aedaee;
+$navy: #191ba9;
+$blue: #5cc2f2;
+// $light-blue: #C1EAF2;
+$light-blue: #e1f4f8;
 
 // ---
 $color-active: $red; // アクティブ色
@@ -40,8 +42,9 @@ $layer: (
 	modal: 100, // モダール
 	drawer: 40, // ドロワー
 	drawer-bg: 39, // ドロワーバックグラウンド
-	floating: 30, // フローティングアイテム
 	header: 20, // ヘッダー
+	works-item-bg-text: 16, // 実績item背景文字
+	works-item-bg: 15, // 実績item背景
 	footer: 10, // フッター
 	default: 1,
 );
@@ -50,26 +53,21 @@ $layer: (
 $transition-change-time: 0.3s;
 
 // フォントインポート
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 // ---------------------------------------------------------------------------
 // フォント
 // https://saruwakakun.com/html-css/basic/font-family-how-to
 // $font-family-default: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif; // 標準フォント
 // ---------------------------------------------------------------------------
-$font-family-default: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
-$font-family-english: sans-serif;
+$font-family-default: 'Noto Sans JP', sans-serif;
+$font-family-english: 'Open Sans', sans-serif;
 $font-family-base: $font-family-default;
 $font-weight-base: 400;
 $font-weight-bold: 600;
 $line-height-base: 1;// 基本設定
 $line-height-pra-base: 1.6;// 文章の場合の基本設定
 // フォントサイズ
-$font-size-max: 3.4rem;
-$font-size-large: 2.2rem;
-$font-size-medium: 1.8rem;
 $font-size-base: 1.6rem; // 基準サイズ
-$font-size-small: 1.4rem;
-$font-size-min: 1.2rem;
 
 // ブレイクポイント
 $max-width-sp: 559;
@@ -80,9 +78,3 @@ $breakpoints: (
 	'tab': '(max-width: #{$max-width-tab}px)', // 〜959
 	'pc': '(min-width: #{$max-width-tab + 1}px)', // 960〜
 );
-// $breakpoints:(
-// 	"sp": "(max-width: 767px)",// ~767
-// 	"tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner + $padding-pc * 2 - 1px})",// 768~1247
-// 	"tab": "(max-width: #{$layout-width-inner + $padding-pc * 2 - 1px})",// ~1247
-// 	"pc": "(min-width: #{$layout-width-inner})",// 1200~
-// );
