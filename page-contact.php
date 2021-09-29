@@ -19,16 +19,13 @@
 		- メイン
 		---------------------------------------------------->
 		<div class="container">
-
-			<!-------------------------- 
-			- メイン
-			---------------------------->
 			<main class="main">
+
 				<section class="page-contact__">
 					<!-- <?php get_template_part('src-php/20_component//'); ?> -->
 				</section>
-			</main>
 
+			</main>
 		</div><!-- /.container -->
 
 		<!-------------------------------------------------- 

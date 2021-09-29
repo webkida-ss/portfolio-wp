@@ -18,14 +18,12 @@
 		- メイン
 		---------------------------------------------------->
 		<div class="container">
-
-			<!-------------------------- 
-			- メイン
-			---------------------------->
 			<main class="main">
+
 				<section class="archive-work__">
 					<!-- <?php get_template_part('src-php/20_component//'); ?> -->
 				</section>
+
 			</main>
 
 		</div><!-- /.container -->
