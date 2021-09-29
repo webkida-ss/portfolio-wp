@@ -12,22 +12,19 @@
 
 	&.is-white {
 		background: $white;
-
 		border-bottom: 1px solid $light-blue;
 	}
+
 	&__title {
 		width: 80px;
 		height: auto;
-		transition: opacity .5s ease 0s;
+		transition: all $transition-change-time ease 0s;
 
 		@include mq(sp) {
 			width: 50px;
 		}
-		img {
-			width: 100%;
-		}
 		&:hover {
-			opacity: .6;
+			opacity: $hover-opacity;
 			cursor: pointer;
 		}
 	}
@@ -43,7 +40,7 @@
 	// ------------------------------------------------------------
 	&__nav {
 		margin-left: auto;
-		transition: all .5s ease 0s;
+		transition: all $transition-change-time ease 0s;
 
 		@include mq(sp) {
 			position: fixed;// ドロワーメニュー位置固定
@@ -61,9 +58,9 @@
 		}
 
 		&--list {
-			display: flex;// 横並び
-			justify-content: center;// 左右中央揃え
-			align-items: center;// 上下中央揃え
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			height: inherit;
 
 			@include mq(sp) {
@@ -97,7 +94,8 @@
 		&--link {
 			display: inline-block;
 			position: relative;
-			transition: all .5s ease 0s;
+			transition: all $transition-change-time ease 0s;
+			
 			&:hover {
 				opacity: .8;
 				transform: translateY(-2px);// 上にずらす
@@ -116,7 +114,7 @@
 		right: $padding-sp;
 		z-index: map-get($layer, drawer);
 		background: transparent;
-		transition: all .5s ease 0s;
+		transition: all $transition-change-time ease 0s;
 
 		@include mq(sp) { // スマホのみ表示
 			// 配下のbarsを上下中央揃え
@@ -124,6 +122,8 @@
 			align-items: center;
 			height: $header-height-sp;
 		}
+		$drawer-bar-height: 4px;
+		$drawer-bar-margin: 4px;
 
 		&.is-checked {
 			transform: translateX(-300px); // ボタンの位置を調整
@@ -131,30 +131,28 @@
 		&:hover {
 			cursor: pointer;
 		}
-		$header-drawer-bar-height: 4px;
-		$header-drawer-bar-margin: 4px;
 		&--bars {
 			display: inline-block;
 			position: relative;
 			width: 30px;
-			height: ($header-drawer-bar-height * 3) + ($header-drawer-bar-margin * 2);// 4px ✖ 3 + 4px ✖ 2
+			height: ($drawer-bar-height * 3) + ($drawer-bar-margin * 2);// 4px ✖ 3 + 4px ✖ 2
 		}
 		&--bar {
 			display: block;
 			position: absolute;
 			right: 0;
 			width: 100%;
-			height: $header-drawer-bar-height;
+			height: $drawer-bar-height;
 			background: $black;
 
 			&:nth-of-type(1) {
 				top: 0px;
 			}
 			&:nth-of-type(2) {
-				top: $header-drawer-bar-height + $header-drawer-bar-margin;// 8px
+				top: $drawer-bar-height + $drawer-bar-margin;// 8px
 			}
 			&:nth-of-type(3) {
-				top: ($header-drawer-bar-height + $header-drawer-bar-margin) * 2; // 16px
+				top: ($drawer-bar-height + $drawer-bar-margin) * 2; // 16px
 			}
 
 			.is-checked & {
@@ -183,7 +181,7 @@
 		width: 100%;
 		height: 100%;
 		background: $black;
-		transition: all .5s ease 0s;
+		transition: all $transition-change-time ease 0s;
 		&.is-checked {
 			display: block;
 			opacity: .5;
