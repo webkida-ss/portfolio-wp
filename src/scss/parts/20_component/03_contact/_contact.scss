@@ -9,26 +9,34 @@
     .mw_wp_form{
         $border-black: 1px solid $black;
         $border-blue: 1px solid $blue;
+        
         input:not([type="radio"]),textarea{
             width: 100%;
             outline: none;
             transition: all $transition-change-time ease 0s;
-            
-            &:hover,
-            &:focus {
-                box-shadow: 0px 5px 5px -5px $blue;
-            }
         }
         input{
             border: none;
             border-bottom: $border-black;
             &:hover,
             &:focus {
+                box-shadow: 0px 5px 5px -5px $blue;
                 border-bottom: $border-blue;
             }
         }
         textarea{
-            border: $border-black;
+            height: 150px;
+            padding: 3px 10px;
+            letter-spacing: .1em;
+
+            @include mq(sp) {
+                font-size: 1.2rem;
+            }
+            &:hover,
+            &:focus {
+                box-shadow: 0px 0px 5px 0px $blue;
+                border: $border-blue;
+            }
         }
     }
 }
