@@ -203,7 +203,7 @@ $util-link-border-size: 3px;
 }
 
 // ------------------------------------------------------------
-// container （メインとサイドバーをラップ）
+// container 
 // ------------------------------------------------------------
 .container {
 	// display: flex;
@@ -214,5 +214,4 @@ $util-link-border-size: 3px;
 // main
 // ------------------------------------------------------------
 .main {
-	// width: getMinus100Percent($sidebar-width-pc + $container-margin-width-pc );
 }
