@@ -10,10 +10,14 @@
         $border-black: 1px solid $black;
         $border-blue: 1px solid $blue;
         
-        input:not([type="radio"]),textarea{
-            width: 100%;
-            outline: none;
-            transition: all $transition-change-time ease 0s;
+        input,textarea{
+            margin: 10px 0 20px;
+
+            &:not([type="radio"]){
+                width: 100%;
+                outline: none;
+                transition: all $transition-change-time ease 0s;
+            }
         }
         input{
             border: none;
