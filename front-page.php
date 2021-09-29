@@ -18,16 +18,24 @@
 		- メイン
 		---------------------------------------------------->
 		<div class="container">
-
-			<!-------------------------- 
-			- メイン
-			---------------------------->
 			<main class="main">
+
+				<!-- トップ -->
 				<section class="front-page__top">
 					<?php get_template_part('src-php/20_component/01_top/_top'); ?>
 				</section>
-			</main>
 
+				<!-- 制作実績アーカイブ -->
+				<section class="front-page__work">
+					<?php get_template_part('src-php/20_component/02_work/_work'); ?>
+				</section>
+
+				<!-- お問い合わせ -->
+				<section class="front-page__contact">
+					<?php get_template_part('src-php/20_component/03_contact/_contact'); ?>
+				</section>
+
+			</main>
 		</div><!-- /.container -->
 
 		<!-------------------------------------------------- 
