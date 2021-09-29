@@ -1,20 +1,3 @@
-// ------------------------------------------------------------
-// セクション
-// ------------------------------------------------------------
-.section {
-	&__title {
-		font-weight: $font-weight-bold;
-		// font-size: *rem;
-		font-family: $font-family-english;// 英語の場合
-		text-align: center;
-
-		@include mq(sp) {
-			// font-size: *rem;
-		}
-	}
-}
-
-
 // -----------------------------------------------------------------------------
 // 共通系（便利系）
 // -----------------------------------------------------------------------------
@@ -30,6 +13,7 @@
 	max-width: 100%;
 	height: inherit;// 高さは親を継承
 	margin: 0 auto;
+	padding: 0 10px;
 
 	@include mq(tab-only) {
 		width: $layout-width-inner-tab;
@@ -38,6 +22,7 @@
 		// width: auto;
 		// width: ($layout-width-inner-sp / $layout-width-canvas-sp) * 100% ;
 		width: $layout-width-inner-sp;
+		padding: 0 5px;
 		// margin: 0 *px;// 固定マージン
 	}
 }
@@ -50,17 +35,34 @@
 }
 
 // ------------------------------------------------------------
-// セクション
+// セクションタイトル
 // ------------------------------------------------------------
 .section-title {
 
+	position: relative;
 	font-weight: $font-weight-bold;
-	// font-size: *rem;
+	font-size: 3.8rem;
+	line-height: 1;
 	font-family: $font-family-english;// 英語の場合
 	text-align: center;
 
+	@include mq(tab-only) {
+		font-size: 3.2rem;
+	}
 	@include mq(sp) {
-		// font-size: *rem;
+		font-size: 2.4rem;
+	}
+
+	&::after {
+		display: block;
+		position: absolute;
+		bottom: -8px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 40px;
+		content: '';
+
+		border-bottom: 4px solid #f1b4b4;
 	}
 }
 
@@ -191,38 +193,6 @@ $util-link-border-size: 3px;
 			}
 		}
 	}
-
-	// フローティングアイテム
-	&-floating {
-		opacity: 0;
-		position: fixed;
-		right: 30px;
-		bottom: 30px;
-		z-index: map-get($layer , floating);
-		width: 50px;
-		height: 50px;
-		border: 1px solid $black;
-		background: $black;
-		transition: all .8s ease 0s;
-		&::before {
-			display: block;
-			position: absolute;
-			top: 20px;
-			left: 17px;
-			transform: rotate(45deg);
-			width: 15px;
-			height: 15px;
-			content: '';
-			transition: opacity 1s ease 0s;
-
-			$util-floating-border: 3px solid $white;
-			border-top: $util-floating-border;
-			border-left: $util-floating-border;
-		}
-		&.is-show {
-			opacity: 1;
-		}
-	}
 }
 
 // ------------------------------------------------------------
@@ -240,22 +210,9 @@ $util-link-border-size: 3px;
 	// justify-content: space-between;
 }
 
-$sidebar-width-pc: 200px;
-$sidebar-width-tab: 150px;
-$sidebar-width-sp: 100px;
-
-$container-margin-width-pc: 20px;
-
 // ------------------------------------------------------------
 // main
 // ------------------------------------------------------------
 .main {
 	// width: getMinus100Percent($sidebar-width-pc + $container-margin-width-pc );
-}
-
-// ------------------------------------------------------------
-// aside
-// ------------------------------------------------------------
-.aside {
-	// width: $sidebar-width-pc;
 }
