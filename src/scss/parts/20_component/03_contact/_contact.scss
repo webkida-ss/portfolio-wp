@@ -9,7 +9,7 @@
     .mw_wp_form{
         $border-black: 1px solid $black;
         $border-blue: 1px solid $blue;
-        input[type="text"],input[type="email"],textarea{
+        input:not([type="radio"]),textarea{
             width: 100%;
             outline: none;
             transition: all $transition-change-time ease 0s;
