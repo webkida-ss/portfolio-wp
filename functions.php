@@ -50,25 +50,6 @@ add_action('admin_menu', function () {
 	);
 });
 
-/**
- * ウィジェットの登録
- */
-add_action(
-	'widgets_init',
-	function () {
-		register_sidebar(
-			array(
-				'name' => 'サイドバー', // 表示するエリア名
-				'id' => 'sidebar', // id
-				// 'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				// 'after_widget' => '</div>',
-				// 'before_title' => '<div class="widget-title">',
-				// 'after_title' => '</div>',
-			)
-		);
-	}
-);
-
 /************************************************************************
  * CSS・JS読み込み
  * wp_enqueue_***：cssやJS等の外部ファイル読み込みの推奨関数
