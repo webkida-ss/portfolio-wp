@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<div class="wrapper front-page">
+	<div class="wrapper not-found">
 
 		<!-------------------------------------------------- 
 		- ヘッダー
@@ -24,7 +24,7 @@
 			- メイン
 			---------------------------->
 			<main class="main">
-				<section class="front-page__top">
+				<section class="not-found__">
 					該当のページはございません。
 				</section>
 			</main>
