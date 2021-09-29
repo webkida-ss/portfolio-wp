@@ -20,15 +20,12 @@
 // 共通系 -----------------------------------------------------
 @import 'parts/10_common/_header';// ヘッダー
 @import 'parts/10_common/_footer';// フッター
-
+@import 'parts/10_common/_contact';// お問い合わせ
 
 // 部品系 ------------------------------------------------------
 
 // トップページ
 @import 'parts/20_component/01_top/_top';
 
-// お問い合わせ
-@import 'parts/20_component/02_contact/_contact';
-
 // 制作実績
-@import 'parts/20_component/03_work/_work';
+@import 'parts/20_component/02_work/_work';
