@@ -1,28 +1,31 @@
 .header {
-	// ------------------------------------------------------------
-	// 固定する場合はfixかつ、bodyにpadding-topついてるかチェック
-	// ------------------------------------------------------------
 	position: fixed;// ヘッダー位置固定
 	top: 0;
 	left: 0;
 	z-index: map-get($layer,header);
 	width: 100%;
 	height: $header-height-pc;
-	// padding: *px 0;
 
 	@include mq(sp) {
 		height: $header-height-sp;
 	}
+
+	&.is-white {
+		background: $white;
+
+		border-bottom: 1px solid $light-blue;
+	}
 	&__title {
-		// ロゴなら
-		width: 100px;
-		height: 100px;
-		transition: opacity $transition-change-time ease 0s;
+		width: 80px;
+		height: auto;
+		transition: opacity .5s ease 0s;
+
+		@include mq(sp) {
+			width: 50px;
+		}
 		img {
 			width: 100%;
-			height: 100%;
 		}
-
 		&:hover {
 			opacity: .6;
 			cursor: pointer;
@@ -39,8 +42,8 @@
 	// ドロワー開いている際はメニュー
 	// ------------------------------------------------------------
 	&__nav {
-		margin-left: auto;// ナビゲーションを右寄せ
-		transition: all $transition-change-time ease 0s;
+		margin-left: auto;
+		transition: all .5s ease 0s;
 
 		@include mq(sp) {
 			position: fixed;// ドロワーメニュー位置固定
@@ -50,8 +53,7 @@
 			transform: translateX(105%); // スマホで閉じてる時は非表示（画面外に押し出す）
 			width: 300px;
 			height: 100%;
-			// padding-top: *px;
-			background: $white;
+			background: $light-blue;
 
 			&.is-checked {
 				transform: translateX(0%); // 元の位置に移動
@@ -69,44 +71,37 @@
 			}
 		}
 		&--item {
+			font-weight: $font-weight-bold;
+			font-size: 2rem;
+			font-family: $font-family-english;
+
 			@include mq(tab-only) {
-				// font-size: rem;
+				font-size: 1.8rem;
 			}
 			@include mq(sp) {
-				// font-size: rem;
-				// margin-top: px;
+				margin-top: 30px;
+				font-size: 1.6rem;
 				text-align: center;
 			}
 			& + & {
-				// margin-left: *px;
+				margin-left: 40px;
+
 				@include mq(tab-only) {
-					// margin-left: *px;
+					margin-left: 25px;
 				}
 				@include mq(sp) {
-					// margin: 10px 0 0 0;
+					margin: 10px 0 0 0;
 				}
 			}
 		}
 		&--link {
+			display: inline-block;
 			position: relative;
-			// 選択時の下線
-			&::after {
-				display: block;
-				position: absolute;
-				transform: scale(0);// 最初は非表示
-				width: 100%;
-				height: 2px;
-				content: '';
-				// opacity: 0;// opacity方式でも可能
-				transition: transform $transition-change-time ease 0s;
-
-				border-bottom: 2px solid $dark-gray;
-			}
+			transition: all .5s ease 0s;
 			&:hover {
-				&::after {
-					// opacity: 1;
-					transform: scale(1);
-				}
+				opacity: .8;
+				transform: translateY(-2px);// 上にずらす
+				color: $red-active;
 			}
 		}
 	}
@@ -117,11 +112,11 @@
 	&__drawer { // ドロワーボタン（ハンバーガメニュー）
 		display: none;
 		position: fixed;
-		top: 0px;
+		top: 0;
 		right: $padding-sp;
 		z-index: map-get($layer, drawer);
 		background: transparent;
-		transition: all $transition-change-time ease 0s;
+		transition: all .5s ease 0s;
 
 		@include mq(sp) { // スマホのみ表示
 			// 配下のbarsを上下中央揃え
@@ -129,8 +124,6 @@
 			align-items: center;
 			height: $header-height-sp;
 		}
-		$header-drawer-bar-height: 4px;
-		$header-drawer-bar-margin: 4px;
 
 		&.is-checked {
 			transform: translateX(-300px); // ボタンの位置を調整
@@ -138,7 +131,8 @@
 		&:hover {
 			cursor: pointer;
 		}
-
+		$header-drawer-bar-height: 4px;
+		$header-drawer-bar-margin: 4px;
 		&--bars {
 			display: inline-block;
 			position: relative;
@@ -167,6 +161,7 @@
 				&:nth-of-type(1) {
 					top: 10px;
 					transform: rotate(-45deg);
+					background: $white;
 				}
 				&:nth-of-type(2) {
 					background: transparent; // バツ印のため2本目は非表示
@@ -174,6 +169,7 @@
 				&:nth-of-type(3) {
 					top: 10px;
 					transform: rotate(45deg);
+					background: $white;
 				}
 			}
 		}
@@ -187,7 +183,7 @@
 		width: 100%;
 		height: 100%;
 		background: $black;
-		transition: all $transition-change-time ease 0s;
+		transition: all .5s ease 0s;
 		&.is-checked {
 			display: block;
 			opacity: .5;
