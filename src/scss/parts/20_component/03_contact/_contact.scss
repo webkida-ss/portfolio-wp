@@ -46,6 +46,13 @@
         }
         // ラジオボタン
         .mwform-radio-field{
+            &:first-child{
+                margin-left: 50px;
+            }
+            &:not(:first-child){
+                margin-left: 30px;
+            }
+            
             label{
                 input[type="radio"]{
                     display: none;
