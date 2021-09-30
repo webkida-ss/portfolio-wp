@@ -17,13 +17,14 @@
 		<!-------------------------------------------------- 
 		- メイン
 		---------------------------------------------------->
-		<div class="inner container">
-			<main class="main">
+		<main>
 
-				<!-- トップ -->
-				<section id="top" class="front-page__top">
-					<?php get_template_part('src-php/20_component/01_top/_top'); ?>
-				</section>
+			<!-- トップ -->
+			<section id="top" class="front-page__top">
+				<?php get_template_part('src-php/20_component/01_top/_top'); ?>
+			</section>
+
+			<div class="inner container">
 
 				<!-- 制作実績アーカイブ -->
 				<section id="works" class="front-page__work">
@@ -35,8 +36,8 @@
 					<?php get_template_part('src-php/10_common/_contact'); ?>
 				</section>
 
-			</main>
-		</div><!-- /.container -->
+			</div><!-- /.container -->
+		</main>
 
 		<!-------------------------------------------------- 
 		- フッター

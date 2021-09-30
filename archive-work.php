@@ -17,16 +17,16 @@
 		<!-------------------------------------------------- 
 		- メイン
 		---------------------------------------------------->
-		<div class="inner container">
-			<main class="main">
+		<main>
+			<div class="inner container">
 
 				<section class="archive-work__">
 					<!-- <?php get_template_part('src-php/20_component//'); ?> -->
 				</section>
 
-			</main>
 
-		</div><!-- /.container -->
+			</div><!-- /.container -->
+		</main>
 
 		<!-------------------------------------------------- 
 		- フッター
