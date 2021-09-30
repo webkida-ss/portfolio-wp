@@ -13,7 +13,7 @@
 	max-width: 100%;
 	height: inherit;// 高さは親を継承
 	margin: 0 auto;
-	padding: 0 10px; 
+	padding: 0 10px;
 
 	@include mq(tab-only) {
 		width: $layout-width-inner-tab;
@@ -30,36 +30,35 @@
 // ------------------------------------------------------------
 // ページタイトル
 // ------------------------------------------------------------
-.page-title{
-	
-}
+
 
 // ------------------------------------------------------------
 // セクションタイトル
 // ------------------------------------------------------------
 .section-title {
-
 	position: relative;
 	font-weight: normal;
 	font-size: 3.8rem;
 	line-height: 1;
 	font-family: $font-family-english;// 英語の場合
 	text-align: center;
-	span{
+
+	@include mq(tab-only) {
+		font-size: 3.2rem;
+	}
+	@include mq(sp) {
+		font-size: 2.4rem;
+	}
+	span {
 		margin-left: 10px;
 		font-size: 2rem;
+
 		@include mq(tab-only) {
 			font-size: 1.6rem;
 		}
 		@include mq(sp) {
 			font-size: 1.2rem;
 		}
-	}
-	@include mq(tab-only) {
-		font-size: 3.2rem;
-	}
-	@include mq(sp) {
-		font-size: 2.4rem;
 	}
 
 	&::after {
@@ -139,22 +138,22 @@
 // paddingクラス
 // ------------------------------------------------------------
 .p {
-	&t{
-		&-40{
+	&t {
+		&-40 {
 			padding-top: 40px;
 		}
-		&-60{
+		&-60 {
 			padding-top: 60px;
 		}
 	}
-	&b{
-		&-40{
+	&b {
+		&-40 {
 			padding-bottom: 40px;
 		}
-		&-60{
+		&-60 {
 			padding-bottom: 60px;
 		}
-		&-120{
+		&-120 {
 			padding-bottom: 120px;
 		}
 	}
@@ -163,22 +162,21 @@
 // ------------------------------------------------------------
 // util
 // ------------------------------------------------------------
-$util-link-width-pc: 100px;
-$util-link-height-pc: 50px;
+$util-link-width-pc: 200px;
+$util-link-height-pc: 60px;
 $util-link-width-sp: $util-link-width-pc;
 $util-link-height-sp: $util-link-height-pc;
-$util-link-border-size: 3px;
+$util-link-border-size: 2px;
 .util {
 	// 共通リンクボタン
 	&-link {
-		cursor: pointer;
 		width: $util-link-width-pc;
 		height: $util-link-height-pc;
 		margin: 0 auto;
 		font-weight: $font-weight-bold;
-		// font-size: *rem;
 		line-height: getLineHeightForBox($util-link-height-pc, $util-link-border-size);
 		text-align: center;
+		cursor: pointer;
 
 		@include mq(sp) {
 			width: $util-link-width-sp;
@@ -189,15 +187,43 @@ $util-link-border-size: 3px;
 
 		a {
 			display: block;
+			position: relative;
 			width: 100%;
 			height: 100%;
 			border-width: $util-link-border-size;
 			border-style: solid;
 			border-color: $black;
+			color: $black;
 			transition: all $transition-change-time ease 0s;
+			&::before,
+			&::after {
+				display: inline-block;
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border: solid $black;
+				content: '';
+				transition: all $transition-change-time ease 0s;
+			}
+			&::before {
+				top: -6px;
+				left: -6px;
+				border-width: 1px 0 0 1px;
+			}
+			&::after {
+				right: -6px;
+				bottom: -6px;
+				border-width: 0 1px 1px 0;
+			}
 			&:hover {
-				border-color: $white;
-				background: $black;
+				&::before,
+				&::after {
+					width: calc(100% + 11px);
+					height: calc(100% + 11px);
+					border-color: $blue;
+				}
+				background-color: $blue;
+				border-color: $blue;
 				color: $white;
 			}
 		}
@@ -208,7 +234,7 @@ $util-link-border-size: 3px;
 // wrapper
 // ------------------------------------------------------------
 .wrapper {
-// 
+	// 
 }
 
 // ------------------------------------------------------------
@@ -216,6 +242,7 @@ $util-link-border-size: 3px;
 // ------------------------------------------------------------
 .container {
 	padding-bottom: 100px;
+
 	@include mq(tab-only) {
 		padding-bottom: 60px;
 	}
@@ -227,5 +254,3 @@ $util-link-border-size: 3px;
 // ------------------------------------------------------------
 // main
 // ------------------------------------------------------------
-.main {
-}

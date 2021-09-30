@@ -40,5 +40,9 @@
 			パスワード： <span class="works__password" id="js-password">8pCtk0FFmQnOE</span>
 		</div><!-- /.works__basic -->
 
+		<div class="util-link works__more">
+			<a href="<?php echo esc_url(home_url()) . '/work'; ?>">もっと見る</a>
+		</div>
+
 	</div>
 </div>
