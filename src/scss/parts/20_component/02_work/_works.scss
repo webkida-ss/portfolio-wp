@@ -14,6 +14,10 @@
         cursor: pointer;
         overflow: hidden;
         transition: all $transition-change-time ease 0s;
+        p{
+            margin-top: 10px;
+            text-align: center;
+        }
 		@include mq(pc) {
             $item-margin-pc: 20px;
             $item-num-pc: 4;
@@ -27,12 +31,12 @@
 			}
 		}
 		@include mq(tab-only) {
-            $item-margin-tab: 10px;
+            $item-margin-tab: 15px;
             $item-num-tab: 3;
 			width: getCardWith($item-margin-tab,$item-num-tab);
             // 始めの行以外はmtつける
             &:not(:nth-child(-n+#{$item-num-tab})) {
-                margin-top: $item-num-tab;
+                margin-top: $item-margin-tab;
             }
 			&:not(:nth-child(#{$item-num-tab}n+1)) {
 				margin-left: $item-margin-tab;
@@ -45,7 +49,7 @@
 			font-size: 1.2rem;
             // 始めの行以外はmtつける
             &:not(:nth-child(-n+#{$item-num-sp})) {
-                margin-top: $item-num-sp;
+                margin-top: $item-margin-sp;
             }            
 			&:not(:nth-child(#{$item-num-sp}n+1)) {
 				margin-left: $item-margin-sp;
@@ -66,6 +70,7 @@
             }
         }
     }
+    // 画像
     &__img{
         position: relative;
 		width: 95%;

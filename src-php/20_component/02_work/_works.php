@@ -20,12 +20,12 @@
 				?>
 
 					<li class="works__item">
-						<a href="<?php echo get_field('work_url'); ?>">
+						<a href="<?php the_field('work_url'); ?>">
 							<div class="works__img">
 								<?php the_post_thumbnail(); ?>
 							</div>
 							<p><?php the_title(); ?></p>
-							<p><?php echo get_field('work_subtitle', $post_id); ?></p>
+							<p><?php the_field('work_subtitle'); ?></p>
 						</a>
 					</li><!-- /.works__item -->
 
