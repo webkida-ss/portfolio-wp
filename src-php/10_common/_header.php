@@ -24,13 +24,13 @@
 					<a href="<?php echo esc_url(home_url()); ?>/#top" class="header__nav--link js-drawer-item">Top</a>
 				</li>
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/#profile" class="header__nav--link js-drawer-item">Profile</a>
-				</li>
-				<li class="header__nav--item">
 					<a href="<?php echo esc_url(home_url()); ?>/#service" class="header__nav--link js-drawer-item">Service</a>
 				</li>
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/#skill" class="header__nav--link js-drawer-item">Skill</a>
+					<a href="<?php echo esc_url(home_url()); ?>/profile#profile" class="header__nav--link js-drawer-item">Profile</a>
+				</li>
+				<li class="header__nav--item">
+					<a href="<?php echo esc_url(home_url()); ?>/profile#skill" class="header__nav--link js-drawer-item">Skill</a>
 				</li>
 				<li class="header__nav--item">
 					<a href="<?php echo esc_url(home_url()); ?>/#works" class="header__nav--link js-drawer-item">Works</a>
