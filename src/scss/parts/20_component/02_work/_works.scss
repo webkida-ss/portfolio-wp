@@ -19,7 +19,7 @@
         }
 		@include mq(pc) {
             $item-margin-pc: 20px;
-            $item-num-pc: 4;
+            $item-num-pc: 3;
 			width: getCardWith($item-margin-pc,$item-num-pc);
             // 始めの行以外はmtつける
             &:not(:nth-child(-n+#{$item-num-pc})) {
@@ -31,7 +31,7 @@
 		}
 		@include mq(tab-only) {
             $item-margin-tab: 15px;
-            $item-num-tab: 3;
+            $item-num-tab: 2;
 			width: getCardWith($item-margin-tab,$item-num-tab);
             // 始めの行以外はmtつける
             &:not(:nth-child(-n+#{$item-num-tab})) {
@@ -43,7 +43,7 @@
 		}
 		@include mq(sp) {
             $item-margin-sp: 10px;
-            $item-num-sp: 2;
+            $item-num-sp: 1;
 			width: getCardWith($item-margin-sp,$item-num-sp);
 			font-size: 1.2rem;
             // 始めの行以外はmtつける
