@@ -6,7 +6,7 @@
 		$args = array(
 			'post_type' => 'work', // 投稿タイプ：制作実績
 			'order' => 'DESC',
-			'posts_per_page' => 10,
+			'posts_per_page' => 6,
 		);
 		// 投稿取得
 		$the_query = get_posts($args);
