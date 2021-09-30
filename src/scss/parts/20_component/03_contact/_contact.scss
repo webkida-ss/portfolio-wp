@@ -11,18 +11,22 @@
             &:not(:first-child) {
                 margin-top: 30px;
             }
-            // 必須マーク
-            &.is-required{
-                >label{
-                    position: relative;
-                    &::after{
-                        position: absolute;
-                        display: block;
-                        content: '*';
-                        color: $red;
-                        top: 50%;
-                        right: -20px;
-                        transform: translateY(-50%);
+        }
+        // 必須マーク
+        &.mw_wp_form_input{
+            .contact__item{
+                &.is-required{
+                    >label{
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            display: block;
+                            content: '*';
+                            color: $red;
+                            top: 50%;
+                            right: -20px;
+                            transform: translateY(-50%);
+                        }
                     }
                 }
             }
@@ -121,7 +125,7 @@
                 }
             }
         }
-
+        
         // エラーメッセージ
         span{
             &.error{
@@ -157,10 +161,18 @@
                 margin: 20px auto 0;
             }
         }
+
         // 確認画面
         &.mw_wp_form_confirm{
-            p{
-
+            .contact__radio{
+                display: inline-block;
+            }
+            font-size: 2rem;
+            font-weight: $font-weight-bold;
+            label{
+                margin-right: 10px;
+                font-size: 1.6rem;
+                font-weight: normal;
             }
         }
     }
