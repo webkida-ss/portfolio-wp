@@ -193,6 +193,7 @@ $util-link-border-size: 2px;
 			border-width: $util-link-border-size;
 			border-style: solid;
 			border-color: $black;
+			color: $black;
 			transition: all $transition-change-time ease 0s;
 			&::before,
 			&::after {
@@ -219,8 +220,11 @@ $util-link-border-size: 2px;
 				&::after {
 					width: calc(100% + 11px);
 					height: calc(100% + 11px);
-					border-color: $black;
+					border-color: $blue;
 				}
+				background-color: $blue;
+				border-color: $blue;
+				color: $white;
 			}
 		}
 	}
