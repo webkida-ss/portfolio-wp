@@ -19,7 +19,7 @@
 		- メイン
 		---------------------------------------------------->
 		<main>
-			<div class="inner container">
+			<div class="container">
 
 				<section class="single-work__">
 					<!-- <?php get_template_part('src-php/20_component//'); ?> -->
