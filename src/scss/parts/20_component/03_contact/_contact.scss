@@ -114,9 +114,32 @@
             transition: all $transition-change-time ease 0s;
             border-style: solid;
             border-color: $blue;
-            border-width: 2px;
+            border-width: 3px;
             &:hover {
                 opacity: $hover-opacity;
+            }
+
+            // 戻るボタン
+            &.contact__back{
+                background-color: $gray;
+                border-color: $gray;
+            }
+
+
+            // 送信ボタン
+            &.contact__send{
+                margin: 20px auto 0;
+            }
+        }
+        // 確認画面
+        &.mw_wp_form_confirm{
+            p{
+                &:nth-child(odd){
+                    display: block;
+                }
+                &:nth-child(even){
+                    display: inline-block;
+                }
             }
         }
     }
