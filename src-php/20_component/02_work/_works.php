@@ -1,5 +1,5 @@
 <div class="works">
-	<h2 class="section-title">Works</h2>
+	<h2 class="section-title">制作実績</h2>
 	<div class="works__container">
 
 		<?php
