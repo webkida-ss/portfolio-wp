@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header is-white">
 	<div class="inner header__inner">
 
 		<h1 class="header__title">

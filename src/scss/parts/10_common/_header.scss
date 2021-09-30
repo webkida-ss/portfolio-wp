@@ -1,5 +1,5 @@
 .header {
-	position: fixed;// ヘッダー位置固定
+	// position: fixed;// ヘッダー位置固定
 	top: 0;
 	left: 0;
 	z-index: map-get($layer,header);
@@ -16,12 +16,12 @@
 	}
 
 	&__title {
-		width: 80px;
+		width: 70px;
 		height: auto;
 		transition: all $transition-change-time ease 0s;
 
 		@include mq(sp) {
-			width: 50px;
+			width: 40px;
 		}
 		&:hover {
 			opacity: $hover-opacity;
@@ -69,15 +69,15 @@
 		}
 		&--item {
 			font-weight: normal;
-			font-size: 2rem;
+			font-size: 1.6rem;
 			font-family: $font-family-english;
 
 			@include mq(tab-only) {
-				font-size: 1.8rem;
+				font-size: 1.4rem;
 			}
 			@include mq(sp) {
 				margin-top: 30px;
-				font-size: 1.6rem;
+				font-size: 1.2rem;
 				text-align: center;
 			}
 			& + & {

@@ -32,13 +32,13 @@ jQuery(function () {
 	/*********************************************
 	 * ヘッダー
 	 *********************************************/
-	jQuery(window).scroll(function () {
-		if (jQuery(this).scrollTop() > 400) {
-			jQuery(".header").addClass("is-white");
-		} else {
-			jQuery(".header").removeClass("is-white");
-		}
-	})
+	// jQuery(window).scroll(function () {
+	// 	if (jQuery(this).scrollTop() > 400) {
+	// 		jQuery(".header").addClass("is-white");
+	// 	} else {
+	// 		jQuery(".header").removeClass("is-white");
+	// 	}
+	// })
 
 	/*********************************************
 	 * ドロワー
