@@ -20,8 +20,14 @@
 		<main>
 			<div class="container">
 
+				<!-- お問い合わせ -->
+				<section id="contact" class="front-page__contact">
+					<?php get_template_part('src-php/10_common/_contact'); ?>
+				</section>
+
 			</div><!-- /.container -->
 		</main>
+
 
 		<!-------------------------------------------------- 
 		- フッター
