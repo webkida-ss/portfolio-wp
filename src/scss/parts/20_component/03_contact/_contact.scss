@@ -46,16 +46,11 @@
         }
         // ラジオボタン
         .mwform-radio-field{
-            transition: all $transition-change-time ease 0s;
             &:first-child{
                 margin-left: 50px;
             }
             &:not(:first-child){
                 margin-left: 30px;
-            }
-            &:hover {
-                opacity: $hover-opacity;
-                cursor: pointer;
             }
 
             label{
@@ -73,6 +68,11 @@
                 span{
                     display: inline-block;
                     position: relative;
+                    transition: all $transition-change-time ease 0s;
+                    &:hover {
+                        opacity: $hover-opacity;
+                        cursor: pointer;
+                    }
                     &::before,
 					&::after {
 						display: block;
