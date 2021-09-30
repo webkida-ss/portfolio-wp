@@ -12,6 +12,7 @@
         
         input,textarea{
             margin: 20px 0 30px;
+            transition: all $transition-change-time ease 0s;
 
             &:not([type="radio"]){
                 width: 100%;
