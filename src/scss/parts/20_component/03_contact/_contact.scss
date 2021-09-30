@@ -31,9 +31,6 @@
                 border-bottom: $border-blue;
             }
         }
-        input[type="radio"]{
-
-        }
         textarea{
             height: 150px;
             padding: 3px 10px;
@@ -45,6 +42,55 @@
             &:focus {
                 box-shadow: 0px 0px 5px 0px $blue;
                 border: $border-blue;
+            }
+        }
+        // ラジオボタン
+        .mwform-radio-field{
+            label{
+                input[type="radio"]{
+                    display: none;
+                    &:checked {
+                        & + span {
+                            &::before {
+                                background: $blue;
+                            }
+                        }
+                    }
+                }
+                span{
+                    display: inline-block;
+                    position: relative;
+                    &::before,
+					&::after {
+						display: block;
+						position: absolute;
+						border-radius: 50%;
+						content: '';
+						transition: all $transition-change-time ease 0s;
+					}
+                    &::before {
+						top: 5px;
+						left: -20px;
+						width: 16px;
+						height: 16px;
+						border: 1px solid $black;
+
+						@include mq(sp) {
+							top: 2px;
+						}
+					}
+                    &::after {
+						top: 10px;
+						left: -15px;
+						width: 6px;
+						height: 6px;
+						background: $white;
+
+						@include mq(sp) {
+							top: 7px;
+						}
+					}
+                }
             }
         }
     }
