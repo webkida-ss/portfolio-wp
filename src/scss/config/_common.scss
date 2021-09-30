@@ -167,7 +167,7 @@ $util-link-width-pc: 200px;
 $util-link-height-pc: 60px;
 $util-link-width-sp: $util-link-width-pc;
 $util-link-height-sp: $util-link-height-pc;
-$util-link-border-size: 3px;
+$util-link-border-size: 2px;
 .util {
 	// 共通リンクボタン
 	&-link {
@@ -176,7 +176,6 @@ $util-link-border-size: 3px;
 		height: $util-link-height-pc;
 		margin: 0 auto;
 		font-weight: $font-weight-bold;
-		// font-size: *rem;
 		line-height: getLineHeightForBox($util-link-height-pc, $util-link-border-size);
 		text-align: center;
 
@@ -195,10 +194,32 @@ $util-link-border-size: 3px;
 			border-style: solid;
 			border-color: $black;
 			transition: all $transition-change-time ease 0s;
-			&:hover {
-				border-color: $white;
-				background: $black;
-				color: $white;
+			position: relative;
+			&::before,&::after{
+				display: inline-block;
+				content:'';
+				position:absolute;
+				border: solid $black;
+				width:10px;
+				height:10px;
+				transition: all $transition-change-time ease 0s;
+			}
+			&::before{
+				top:-6px;
+				left:-6px;
+				border-width:1px 0 0 1px;
+			}
+			&::after{
+				bottom:-6px;
+				right:-6px;
+				border-width:0 1px 1px 0;
+			}
+			&:hover{
+				&::before,&::after{
+					width:calc(100% + 11px);
+					height:calc(100% + 11px);
+					border-color: $black;
+				}
 			}
 		}
 	}
