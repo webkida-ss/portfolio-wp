@@ -134,12 +134,6 @@
         // 確認画面
         &.mw_wp_form_confirm{
             p{
-                &:nth-child(odd){
-                    display: block;
-                }
-                &:nth-child(even){
-                    display: inline-block;
-                }
             }
         }
     }
