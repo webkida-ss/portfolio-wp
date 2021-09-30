@@ -2,7 +2,6 @@
 	<h2 class="section-title">Works</h2>
 	<div class="works__container">
 
-
 		<?php
 		$args = array(
 			'post_type' => 'work', // 投稿タイプ：制作実績
