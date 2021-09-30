@@ -18,8 +18,8 @@
 		<!-------------------------------------------------- 
 		- メイン
 		---------------------------------------------------->
-		<div class="inner container">
-			<main class="main">
+		<main>
+			<div class="inner container">
 
 				<!-- プロフィール -->
 				<section id="profile" class="page-profile__profile">
@@ -36,8 +36,8 @@
 					<?php get_template_part('src-php/10_common/_contact'); ?>
 				</section>
 
-			</main>
-		</div><!-- /.container -->
+			</div><!-- /.container -->
+		</main>
 
 		<!-------------------------------------------------- 
 		- フッター

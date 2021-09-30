@@ -18,20 +18,20 @@
 		<!-------------------------------------------------- 
 		- メイン
 		---------------------------------------------------->
-		<div class="container">
-			<main class="main">
+		<main">
+			<div class="inner container">
 
 				<section class="not-found__">
 					該当のページはございません。
 				</section>
 
+			</div><!-- /.container -->
 			</main>
-		</div><!-- /.container -->
 
-		<!-------------------------------------------------- 
+			<!-------------------------------------------------- 
 		- フッター
 		---------------------------------------------------->
-		<?php get_template_part('src-php/10_common/_footer'); ?>
+			<?php get_template_part('src-php/10_common/_footer'); ?>
 	</div><!-- /.wrapper -->
 
 	<?php get_footer(); ?>
