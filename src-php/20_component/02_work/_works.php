@@ -1,6 +1,6 @@
 <!-- データ -->
 <?php
-$post_num = isset($args) ? $args : 6; // 表示件数：デフォルト6件
+$post_num = (is_int($args)) ? $args : 6; // 表示件数：デフォルト6件
 $args = array(
 	'post_type' => 'work', // 投稿タイプ：制作実績
 	'order' => 'DESC',
