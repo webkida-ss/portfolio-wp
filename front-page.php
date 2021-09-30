@@ -27,7 +27,7 @@
 
 				<!-- 制作実績アーカイブ -->
 				<section class="front-page__work">
-					<?php get_template_part('src-php/20_component/02_work/_work'); ?>
+					<?php get_template_part('src-php/20_component/02_work/_works'); ?>
 				</section>
 
 				<!-- お問い合わせ -->

@@ -1,0 +1,111 @@
+.works{ 
+
+    &__title{
+        // 
+    }
+    &__container{
+        margin-top: 50px;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        cursor: pointer;
+        overflow: hidden;
+        transition: all $transition-change-time ease 0s;
+        p{
+            margin-top: 10px;
+            text-align: center;
+        }
+		@include mq(pc) {
+            $item-margin-pc: 20px;
+            $item-num-pc: 4;
+			width: getCardWith($item-margin-pc,$item-num-pc);
+            // 始めの行以外はmtつける
+            &:not(:nth-child(-n+#{$item-num-pc})) {
+                margin-top: $item-margin-pc;
+            }
+            &:not(:nth-child(#{$item-num-pc}n+1)) {
+				margin-left: $item-margin-pc;
+			}
+		}
+		@include mq(tab-only) {
+            $item-margin-tab: 15px;
+            $item-num-tab: 3;
+			width: getCardWith($item-margin-tab,$item-num-tab);
+            // 始めの行以外はmtつける
+            &:not(:nth-child(-n+#{$item-num-tab})) {
+                margin-top: $item-margin-tab;
+            }
+			&:not(:nth-child(#{$item-num-tab}n+1)) {
+				margin-left: $item-margin-tab;
+			}
+		}
+		@include mq(sp) {
+            $item-margin-sp: 10px;
+            $item-num-sp: 2;
+			width: getCardWith($item-margin-sp,$item-num-sp);
+			font-size: 1.2rem;
+            // 始めの行以外はmtつける
+            &:not(:nth-child(-n+#{$item-num-sp})) {
+                margin-top: $item-margin-sp;
+            }            
+			&:not(:nth-child(#{$item-num-sp}n+1)) {
+				margin-left: $item-margin-sp;
+			}
+		}
+        // ホバー時に
+        &:hover{
+            .works__img{
+                &::before {
+					opacity: .7;
+				}
+				&::after {
+					opacity: 1;
+				}
+				img {
+					transform: scale(1.05);
+				}
+            }
+        }
+    }
+    // 画像
+    &__img{
+        position: relative;
+		width: 95%;
+		margin: 5px auto 0;
+		overflow: hidden;
+		border: .1px solid $gray;
+		border-radius: 10px;
+		box-shadow: 0px 0px 5px 0px $gray;
+
+		img {
+            transition: all $transition-change-time ease 0s;
+		}
+		&::before,
+		&::after {
+			opacity: 0;
+			position: absolute;
+			transition: all $transition-change-time ease 0s;
+		}
+		&::before {
+			top: 0;
+			left: 0;
+			z-index: map-get($layer, works-item-bg);
+			width: 100%;
+			height: 100%;
+			background: $black;
+			content: '';
+		}
+		&::after {
+			top: 50%;
+			left: 50%;
+			z-index: map-get($layer, works-item-bg-text);
+			transform: translate(-50%,-50%);
+			color: $white;
+			font-weight: $font-weight-bold;
+			content: 'CLICK';
+		}
+    }
+}
