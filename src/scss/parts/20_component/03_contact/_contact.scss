@@ -2,18 +2,24 @@
     @extend %section-padding;
 
     &__inner{
-        margin-top: 40px;
     }
 
     // お問い合わせフォーム
     .mw_wp_form{
+        margin-top: 40px;
         $border-black: 1px solid $black;
         $border-blue: 1px solid $blue;
-        
-        input,textarea{
-            margin: 20px 0 30px;
-            transition: all $transition-change-time ease 0s;
+        .contact__list{
+        }
+        .contact__item{
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
 
+        input,textarea{
+            transition: all $transition-change-time ease 0s;
+            margin-top: 10px;
             &:not([type="radio"]){
                 width: 100%;
                 outline: none;
@@ -46,60 +52,69 @@
             }
         }
         // ラジオボタン
-        .mwform-radio-field{
-            display: inline-block;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            &:first-child{
-                margin-left: 50px;
-            }
-            &:not(:first-child){
-                margin-left: 30px;
-            }
-
-            label{
-                input[type="radio"]{
-                    display: none;
-                    transition: all $transition-change-time ease 0s;
-                    &:checked {
-                        & + span {
-                            &::before {
-                                background: $blue;
+        .contact__radio{
+            margin-top: 10px;
+            .mwform-radio-field{
+                display: inline-block;
+                &:first-child{
+                    margin-left: 50px;
+                }
+                &:not(:first-child){
+                    margin-left: 30px;
+                }
+    
+                label{
+                    input[type="radio"]{
+                        display: none;
+                        transition: all $transition-change-time ease 0s;
+                        &:checked {
+                            & + span {
+                                &::before {
+                                    background: $blue;
+                                }
                             }
                         }
                     }
-                }
-                span{
-                    display: inline-block;
-                    position: relative;
-                    transition: all $transition-change-time ease 0s;
-                    &:hover {
-                        opacity: $hover-opacity;
-                        cursor: pointer;
+                    span{
+                        display: inline-block;
+                        position: relative;
+                        transition: all $transition-change-time ease 0s;
+                        &:hover {
+                            opacity: $hover-opacity;
+                            cursor: pointer;
+                        }
+                        &::before,
+                        &::after {
+                            display: block;
+                            position: absolute;
+                            border-radius: 50%;
+                            content: '';
+                            transition: all $transition-change-time ease 0s;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        &::before {
+                            left: -20px;
+                            width: 16px;
+                            height: 16px;
+                            border: 1px solid $black;
+                        }
+                        &::after {
+                            left: -15px;
+                            width: 6px;
+                            height: 6px;
+                            background: $white;
+                        }
                     }
-                    &::before,
-					&::after {
-						display: block;
-						position: absolute;
-						border-radius: 50%;
-						content: '';
-						transition: all $transition-change-time ease 0s;
-                        top: 50%;
-                        transform: translateY(-50%);
-					}
-                    &::before {
-						left: -20px;
-						width: 16px;
-						height: 16px;
-						border: 1px solid $black;
-					}
-                    &::after {
-						left: -15px;
-						width: 6px;
-						height: 6px;
-						background: $white;
-					}
                 }
+            }
+        }
+
+        // エラーメッセージ
+        span{
+            &.error{
+                position: absolute;
+                top: 5px;
             }
         }
         // ボタン
@@ -134,6 +149,7 @@
         // 確認画面
         &.mw_wp_form_confirm{
             p{
+
             }
         }
     }
