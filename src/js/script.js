@@ -30,6 +30,17 @@ jQuery(function () {
 	});
 
 	/*********************************************
+	 * ヘッダー
+	 *********************************************/
+	jQuery(window).scroll(function () {
+		if (jQuery(this).scrollTop() > 400) {
+			jQuery(".header").addClass("is-white");
+		} else {
+			jQuery(".header").removeClass("is-white");
+		}
+	})
+
+	/*********************************************
 	 * ドロワー
 	 * jQuery
 	 *********************************************/
@@ -46,9 +57,12 @@ jQuery(function () {
 		jQuery("." + targetClass).removeClass('is-checked');
 	});
 	jQuery(window).resize(function () {
-		if (jQuery(window).width() > 559) {
+		if (jQuery(window).width() > 559) { // is-checkedが残っているタブレット以上のサイズになった場合もバグる可能性あり
 			let targetClass = drawerBtn.attr("data-target");
 			jQuery("." + targetClass).removeClass('is-checked');
+			// jQuery(".header").removeClass('is-white');
+		} else { // スマホの時はヘッダーを白く
+			// jQuery(".header").addClass('is-white');
 		}
 	});
 
