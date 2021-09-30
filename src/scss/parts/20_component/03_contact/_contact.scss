@@ -101,5 +101,22 @@
                 }
             }
         }
+        // ボタン
+        button{
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            background-color: $blue;
+            color: $white;
+            transition: all $transition-change-time ease 0s;
+            border-style: solid;
+            border-color: $blue;
+            border-width: 2px;
+            &:hover {
+                opacity: $hover-opacity;
+            }
+        }
     }
 }
