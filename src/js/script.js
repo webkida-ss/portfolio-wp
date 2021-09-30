@@ -52,4 +52,28 @@ jQuery(function () {
 		}
 	});
 
+	/*********************************************
+	 * ユーザID/パスワード クリップボードコピー
+	 * clickイベントに引数を指定！eventオブジェクトから取得！
+	 *********************************************/
+	function execCopy(e) {
+		let text = e.data;
+		// コピーする媒体となるテキストエリアを生成
+		let clipboard = jQuery('<textarea></textarea>');
+		clipboard.text(text);
+		// body直下に一時的に挿入
+		jQuery('body').append(clipboard);
+		// 選択状態にする
+		clipboard.select();
+		// WebExtension APIのブラウザ拡張の仕組みを呼び出しクリップボードにコピー
+		document.execCommand('copy');
+		// 不要なテキストエリアを削除
+		clipboard.remove();
+		alert('コピーしました：' + text);
+	}
+	let userid = jQuery('#js-userid');
+	userid.click(userid.text(), execCopy);
+	let password = jQuery('#js-password');
+	password.click(password.text(), execCopy);
+
 });

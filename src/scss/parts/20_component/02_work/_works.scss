@@ -107,4 +107,18 @@
 			content: 'CLICK';
 		}
     }
+	// ベーシック認証
+	&__basic {
+		margin-top: 20px;
+		font-size: 1rem;
+		text-align: center;
+		line-height: 1.6;
+	}
+	&__userid, &__password{
+		transition: all $transition-change-time ease 0s;
+		cursor: pointer;
+		&:hover{
+			opacity: 0.5;
+		}
+	}
 }

@@ -32,5 +32,13 @@
 			</ul><!-- /.works__list -->
 		<?php endif;
 		wp_reset_postdata(); ?>
+
+		<!-- ベーシック認証 -->
+		<div class="works__basic">
+			Basic認証には以下を入力してください。<br>
+			ユーザID： <span class="works__userid" id="js-userid">webkidaworks</span>
+			パスワード： <span class="works__password" id="js-password">8pCtk0FFmQnOE</span>
+		</div><!-- /.works__basic -->
+
 	</div>
 </div>
