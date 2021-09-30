@@ -7,9 +7,13 @@
     
     }
     &__list{
-    
+        display: flex;
+        flex-wrap: wrap;
     }
     &__item{
+        cursor: pointer;
+        overflow: hidden;
+        transition: all $transition-change-time ease 0s;
 		@include mq(pc) {
             $item-margin-pc: 20px;
             $item-num-pc: 4;
@@ -46,6 +50,57 @@
 			&:not(:nth-child(#{$item-num-sp}n+1)) {
 				margin-left: $item-margin-sp;
 			}
+		}
+        // ホバー時に
+        &:hover{
+            .works__img{
+                &::before {
+					opacity: .7;
+				}
+				&::after {
+					opacity: 1;
+				}
+				img {
+					transform: scale(1.05);
+				}
+            }
+        }
+    }
+    &__img{
+        position: relative;
+		width: 95%;
+		margin: 5px auto 0;
+		overflow: hidden;
+		border: .1px solid $gray;
+		border-radius: 10px;
+		box-shadow: 0px 0px 5px 0px $gray;
+
+		img {
+            transition: all $transition-change-time ease 0s;
+		}
+		&::before,
+		&::after {
+			opacity: 0;
+			position: absolute;
+			transition: all $transition-change-time ease 0s;
+		}
+		&::before {
+			top: 0;
+			left: 0;
+			z-index: map-get($layer, works-item-bg);
+			width: 100%;
+			height: 100%;
+			background: $black;
+			content: '';
+		}
+		&::after {
+			top: 50%;
+			left: 50%;
+			z-index: map-get($layer, works-item-bg-text);
+			transform: translate(-50%,-50%);
+			color: $white;
+			font-weight: $font-weight-bold;
+			content: 'CLICK';
 		}
     }
 }
