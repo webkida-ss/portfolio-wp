@@ -26,10 +26,9 @@
 
 			<div class="inner container">
 
-
 				<!-- サービス -->
 				<section id="works" class="front-page__service">
-					<?php get_template_part('src-php/20_component/02_work/_service'); ?>
+					<?php get_template_part('src-php/20_component/01_top/_service'); ?>
 				</section>
 
 				<!-- 制作実績アーカイブ -->
