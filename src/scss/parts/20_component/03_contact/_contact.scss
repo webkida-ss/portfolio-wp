@@ -11,7 +11,7 @@
         $border-blue: 1px solid $blue;
         
         input,textarea{
-            margin: 10px 0 20px;
+            margin: 20px 0 30px;
 
             &:not([type="radio"]){
                 width: 100%;
@@ -47,8 +47,8 @@
         // ラジオボタン
         .mwform-radio-field{
             display: inline-block;
-            margin-top: 10px;
-            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-bottom: 30px;
             &:first-child{
                 margin-left: 50px;
             }
@@ -83,9 +83,10 @@
 						border-radius: 50%;
 						content: '';
 						transition: all $transition-change-time ease 0s;
+                        top: 50%;
+                        transform: translateY(-50%);
 					}
                     &::before {
-						top: 5px;
 						left: -20px;
 						width: 16px;
 						height: 16px;
@@ -96,7 +97,6 @@
 						}
 					}
                     &::after {
-						top: 10px;
 						left: -15px;
 						width: 6px;
 						height: 6px;
