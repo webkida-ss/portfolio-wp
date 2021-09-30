@@ -40,12 +40,21 @@
 .section-title {
 
 	position: relative;
-	font-weight: $font-weight-bold;
+	font-weight: normal;
 	font-size: 3.8rem;
 	line-height: 1;
 	font-family: $font-family-english;// 英語の場合
 	text-align: center;
-
+	span{
+		margin-left: 10px;
+		font-size: 2rem;
+		@include mq(tab-only) {
+			font-size: 1.6rem;
+		}
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
+	}
 	@include mq(tab-only) {
 		font-size: 3.2rem;
 	}

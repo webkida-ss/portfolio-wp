@@ -1,11 +1,11 @@
 <header class="header">
 	<div class="inner header__inner">
 
-		<h2 class="header__title">
+		<h1 class="header__title">
 			<a href="<?php echo esc_url(home_url()); ?>">
 				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo.png'); ?>" alt="サイトロゴ">
 			</a>
-		</h2>
+		</h1>
 
 		<!-- ドロワーメニュー -->
 		<div class="header__drawer for-drawer" id="js-drawer" data-target="for-drawer">
@@ -21,22 +21,19 @@
 		<nav class="header__nav for-drawer">
 			<ul class="header__nav--list">
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/#top" class="header__nav--link js-drawer-item">Top</a>
+					<a href="<?php echo esc_url(home_url()); ?>/#service" class="header__nav--link js-drawer-item">サービス</a>
 				</li>
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/#service" class="header__nav--link js-drawer-item">Service</a>
+					<a href="<?php echo esc_url(home_url()); ?>/profile#profile" class="header__nav--link js-drawer-item">プロフィール</a>
 				</li>
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/profile#profile" class="header__nav--link js-drawer-item">Profile</a>
+					<a href="<?php echo esc_url(home_url()); ?>/profile#skill" class="header__nav--link js-drawer-item">スキル</a>
 				</li>
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/profile#skill" class="header__nav--link js-drawer-item">Skill</a>
+					<a href="<?php echo esc_url(home_url()); ?>/#works" class="header__nav--link js-drawer-item">制作実績</a>
 				</li>
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/#works" class="header__nav--link js-drawer-item">Works</a>
-				</li>
-				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/#contact" class="header__nav--link js-drawer-item">Contact</a>
+					<a href="<?php echo esc_url(home_url()); ?>/#contact" class="header__nav--link js-drawer-item">お問い合わせ</a>
 				</li>
 			</ul>
 		</nav>
