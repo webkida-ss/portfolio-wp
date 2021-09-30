@@ -18,7 +18,7 @@
 		- メイン
 		---------------------------------------------------->
 		<main>
-			<div class="inner container">
+			<div class="container">
 
 			</div><!-- /.container -->
 		</main>

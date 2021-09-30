@@ -19,7 +19,7 @@
 		- メイン
 		---------------------------------------------------->
 		<main>
-			<div class="inner container">
+			<div class="container">
 
 				<!-- プロフィール -->
 				<section id="profile" class="page-profile__profile">

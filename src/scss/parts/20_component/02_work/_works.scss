@@ -1,8 +1,7 @@
-.works{ 
+.works{
+	@extend %section-padding;
+	background-color: $light-blue;
 
-    &__title{
-        // 
-    }
     &__container{
         margin-top: 50px;
     }
