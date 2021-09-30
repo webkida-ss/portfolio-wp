@@ -11,8 +11,24 @@
             &:not(:first-child) {
                 margin-top: 30px;
             }
+            // 必須マーク
+            &.is-required{
+                >label{
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        display: block;
+                        content: '*';
+                        color: $red;
+                        top: 50%;
+                        right: -20px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
         }
 
+        // 入力系
         input,textarea{
             transition: all $transition-change-time ease 0s;
             margin-top: 10px;
@@ -109,8 +125,7 @@
         // エラーメッセージ
         span{
             &.error{
-                position: absolute;
-                top: 5px;
+                margin-top: 5px;
             }
         }
         // ボタン
