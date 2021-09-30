@@ -69,7 +69,7 @@
         }
         // ラジオボタン
         .contact__radio{
-            margin-top: 10px;
+            margin-top: 20px;
             .mwform-radio-field{
                 display: inline-block;
                 &:first-child{
@@ -145,6 +145,8 @@
             border-style: solid;
             border-color: $blue;
             border-width: 3px;
+            font-weight: $font-weight-bold;
+
             &:hover {
                 opacity: $hover-opacity;
             }
