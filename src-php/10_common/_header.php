@@ -1,11 +1,11 @@
 <header class="header">
 	<div class="inner header__inner">
 
-		<h2 class="header__title">
+		<h1 class="header__title">
 			<a href="<?php echo esc_url(home_url()); ?>">
 				<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo.png'); ?>" alt="サイトロゴ">
 			</a>
-		</h2>
+		</h1>
 
 		<!-- ドロワーメニュー -->
 		<div class="header__drawer for-drawer" id="js-drawer" data-target="for-drawer">

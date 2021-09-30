@@ -45,7 +45,10 @@
 	line-height: 1;
 	font-family: $font-family-english;// 英語の場合
 	text-align: center;
-
+	span{
+		margin-left: 10px;
+		font-size: 2rem;
+	}
 	@include mq(tab-only) {
 		font-size: 3.2rem;
 	}

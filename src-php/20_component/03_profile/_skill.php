@@ -1,5 +1,5 @@
 <div class="skill">
-	<h2 class="section-title">スキル</h2>
+	<h2 class="section-title">スキル<span>skill</span></h2>
 	<div class="skill__container">
 
 	</div>
