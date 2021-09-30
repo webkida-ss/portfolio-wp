@@ -21,17 +21,22 @@
 			<main class="main">
 
 				<!-- トップ -->
-				<section class="front-page__top">
+				<section id="top" class="front-page__top">
 					<?php get_template_part('src-php/20_component/01_top/_top'); ?>
 				</section>
 
+				<!-- プロフィール -->
+				<section id="profile" class="front-page__profile">
+					<?php get_template_part('src-php/20_component/01_top/_profile'); ?>
+				</section>
+
 				<!-- 制作実績アーカイブ -->
-				<section class="front-page__work">
+				<section id="works" class="front-page__work">
 					<?php get_template_part('src-php/20_component/02_work/_works'); ?>
 				</section>
 
 				<!-- お問い合わせ -->
-				<section class="front-page__contact">
+				<section id="contact" class="front-page__contact">
 					<?php get_template_part('src-php/10_common/_contact'); ?>
 				</section>
 
