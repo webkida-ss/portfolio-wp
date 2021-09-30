@@ -46,6 +46,9 @@
         }
         // ラジオボタン
         .mwform-radio-field{
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 20px;
             &:first-child{
                 margin-left: 50px;
             }
