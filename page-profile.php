@@ -18,7 +18,7 @@
 		<!-------------------------------------------------- 
 		- メイン
 		---------------------------------------------------->
-		<div class="container">
+		<div class="inner container">
 			<main class="main">
 
 				<!-- プロフィール -->
@@ -29,6 +29,11 @@
 				<!-- スキル -->
 				<section id="profile" class="page-profile__skill">
 					<?php get_template_part('src-php/20_component/03_profile/_skill'); ?>
+				</section>
+
+				<!-- お問い合わせ -->
+				<section id="contact" class="front-page__contact">
+					<?php get_template_part('src-php/10_common/_contact'); ?>
 				</section>
 
 			</main>
