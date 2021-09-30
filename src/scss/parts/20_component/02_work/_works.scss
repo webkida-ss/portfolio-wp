@@ -6,4 +6,46 @@
     &__container{
     
     }
+    &__list{
+    
+    }
+    &__item{
+		@include mq(pc) {
+            $item-margin-pc: 20px;
+            $item-num-pc: 4;
+			width: getCardWith($item-margin-pc,$item-num-pc);
+            // 始めの行以外はmtつける
+            &:not(:nth-child(-n+#{$item-num-pc})) {
+                margin-top: $item-margin-pc;
+            }
+            &:not(:nth-child(#{$item-num-pc}n+1)) {
+				margin-left: $item-margin-pc;
+			}
+		}
+		@include mq(tab-only) {
+            $item-margin-tab: 10px;
+            $item-num-tab: 3;
+			width: getCardWith($item-margin-tab,$item-num-tab);
+            // 始めの行以外はmtつける
+            &:not(:nth-child(-n+#{$item-num-tab})) {
+                margin-top: $item-num-tab;
+            }
+			&:not(:nth-child(#{$item-num-tab}n+1)) {
+				margin-left: $item-margin-tab;
+			}
+		}
+		@include mq(sp) {
+            $item-margin-sp: 10px;
+            $item-num-sp: 2;
+			width: getCardWith($item-margin-sp,$item-num-sp);
+			font-size: 1.2rem;
+            // 始めの行以外はmtつける
+            &:not(:nth-child(-n+#{$item-num-sp})) {
+                margin-top: $item-num-sp;
+            }            
+			&:not(:nth-child(#{$item-num-sp}n+1)) {
+				margin-left: $item-margin-sp;
+			}
+		}
+    }
 }
