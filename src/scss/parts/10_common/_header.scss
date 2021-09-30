@@ -1,5 +1,5 @@
 .header {
-	// position: fixed;// ヘッダー位置固定
+	position: fixed;// ヘッダー位置固定
 	top: 0;
 	left: 0;
 	z-index: map-get($layer,header);
