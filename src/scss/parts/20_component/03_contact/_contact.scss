@@ -46,16 +46,22 @@
         }
         // ラジオボタン
         .mwform-radio-field{
+            transition: all $transition-change-time ease 0s;
             &:first-child{
                 margin-left: 50px;
             }
             &:not(:first-child){
                 margin-left: 30px;
             }
-            
+            &:hover {
+                opacity: $hover-opacity;
+                cursor: pointer;
+            }
+
             label{
                 input[type="radio"]{
                     display: none;
+                    transition: all $transition-change-time ease 0s;
                     &:checked {
                         & + span {
                             &::before {
