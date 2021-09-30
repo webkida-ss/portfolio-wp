@@ -59,10 +59,10 @@ jQuery(function () {
 	function execCopy(e) {
 		let text = e.data;
 		// コピーする媒体となるテキストエリアを生成
-		let clipboard = $('<textarea></textarea>');
+		let clipboard = jQuery('<textarea></textarea>');
 		clipboard.text(text);
 		// body直下に一時的に挿入
-		$('body').append(clipboard);
+		jQuery('body').append(clipboard);
 		// 選択状態にする
 		clipboard.select();
 		// WebExtension APIのブラウザ拡張の仕組みを呼び出しクリップボードにコピー
@@ -71,9 +71,9 @@ jQuery(function () {
 		clipboard.remove();
 		alert('コピーしました：' + text);
 	}
-	let userid = $('#js-userid');
+	let userid = jQuery('#js-userid');
 	userid.click(userid.text(), execCopy);
-	let password = $('#js-password');
+	let password = jQuery('#js-password');
 	password.click(password.text(), execCopy);
 
 });
