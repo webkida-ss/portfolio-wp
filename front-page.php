@@ -32,7 +32,7 @@
 
 				<!-- お問い合わせ -->
 				<section class="front-page__contact">
-					<?php get_template_part('src-php/20_component/03_contact/_contact'); ?>
+					<?php get_template_part('src-php/10_common/_contact'); ?>
 				</section>
 
 			</main>
