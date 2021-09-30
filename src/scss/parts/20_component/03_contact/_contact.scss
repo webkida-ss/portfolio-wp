@@ -91,20 +91,12 @@
 						width: 16px;
 						height: 16px;
 						border: 1px solid $black;
-
-						@include mq(sp) {
-							top: 2px;
-						}
 					}
                     &::after {
 						left: -15px;
 						width: 6px;
 						height: 6px;
 						background: $white;
-
-						@include mq(sp) {
-							top: 7px;
-						}
 					}
                 }
             }
