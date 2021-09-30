@@ -1,20 +1,187 @@
 .contact{ 
-    @extend %section-padding;
 
-    &__inner{
-        // width:(*px / $layout-width-canvas-pc) * 100%;
-        // padding: 0 *px 0 *px;
-        @include mq(tab-only) {
-            // width:(*px / $layout-width-canvas-tab) * 100%;
-            // padding: 0 *px 0 *px;
+    // お問い合わせフォーム
+    .mw_wp_form{
+        margin-top: 50px;
+        $border-black: 1px solid $black;
+        $border-blue: 1px solid $blue;
+        .contact__list{
         }
-        @include mq(sp) {
-            // width:(*px / $layout-width-canvas-sp) * 100%;
-            // padding: 0 *px 0 *px;
+        .contact__item{
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
         }
-    }
+        // 必須マーク
+        &.mw_wp_form_input{
+            .contact__item{
+                &.is-required{
+                    >label{
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            display: block;
+                            content: '*';
+                            color: $red;
+                            top: 50%;
+                            right: -20px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
 
-    &__title{
-        // 
+        // 入力系
+        input,textarea{
+            transition: all $transition-change-time ease 0s;
+            margin-top: 10px;
+            &:not([type="radio"]){
+                width: 100%;
+                outline: none;
+                transition: all $transition-change-time ease 0s;
+                letter-spacing: .1em;
+            }
+        }
+        input:not([type="radio"]){
+            height: 40px;
+            border: none;
+            border-bottom: $border-black;
+            padding: 0 10px;
+            &:hover,
+            &:focus {
+                box-shadow: 0px 5px 5px -5px $blue;
+                border-bottom: $border-blue;
+            }
+        }
+        textarea{
+            height: 150px;
+            padding: 3px 10px;
+
+            @include mq(sp) {
+                font-size: 1.2rem;
+            }
+            &:hover,
+            &:focus {
+                box-shadow: 0px 0px 5px 0px $blue;
+                border: $border-blue;
+            }
+        }
+        // ラジオボタン
+        .contact__radio{
+            margin-top: 10px;
+            .mwform-radio-field{
+                display: inline-block;
+                &:first-child{
+                    margin-left: 50px;
+                }
+                &:not(:first-child){
+                    margin-left: 30px;
+                }
+    
+                label{
+                    input[type="radio"]{
+                        display: none;
+                        transition: all $transition-change-time ease 0s;
+                        &:checked {
+                            & + span {
+                                &::before {
+                                    background: $blue;
+                                }
+                            }
+                        }
+                    }
+                    span{
+                        display: inline-block;
+                        position: relative;
+                        transition: all $transition-change-time ease 0s;
+                        &:hover {
+                            opacity: $hover-opacity;
+                            cursor: pointer;
+                        }
+                        &::before,
+                        &::after {
+                            display: block;
+                            position: absolute;
+                            border-radius: 50%;
+                            content: '';
+                            transition: all $transition-change-time ease 0s;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        &::before {
+                            left: -20px;
+                            width: 16px;
+                            height: 16px;
+                            border: 1px solid $black;
+                        }
+                        &::after {
+                            left: -15px;
+                            width: 6px;
+                            height: 6px;
+                            background: $white;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // エラーメッセージ
+        span{
+            &.error{
+                margin-top: 5px;
+            }
+        }
+        // ボタン
+        button{
+            display: block;
+            margin: 40px auto 0;
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            background-color: $blue;
+            color: $white;
+            transition: all $transition-change-time ease 0s;
+            border-style: solid;
+            border-color: $blue;
+            border-width: 3px;
+            &:hover {
+                opacity: $hover-opacity;
+            }
+
+            // 戻るボタン
+            &.contact__back{
+                background-color: $gray;
+                border-color: $gray;
+            }
+
+
+            // 送信ボタン
+            &.contact__send{
+                margin: 20px auto 0;
+            }
+        }
+
+        // 確認画面
+        &.mw_wp_form_confirm{
+            .contact__radio{
+                display: inline-block;
+            }
+            font-size: 2rem;
+            font-weight: $font-weight-bold;
+            label{
+                margin-right: 10px;
+                font-size: 1.6rem;
+                font-weight: normal;
+            }
+            .contact__item{
+                &.remark{
+                    label{
+                        margin-bottom: 5px;
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }

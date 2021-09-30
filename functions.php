@@ -90,6 +90,21 @@ add_action('init', 'disable_author_archive');
 
 
 /************************************************************************
+ * MW WP Form の自動pタグを削除
+ ************************************************************************/
+function mvwpform_autop_filter()
+{
+	if (class_exists('MW_WP_Form_Admin')) {
+		$mw_wp_form_admin = new MW_WP_Form_Admin();
+		$forms = $mw_wp_form_admin->get_forms();
+		foreach ($forms as $form) {
+			add_filter('mwform_content_wpautop_mw-wp-form-' . $form->ID, '__return_false');
+		}
+	}
+}
+mvwpform_autop_filter();
+
+/************************************************************************
  * ファイル取込み
  ************************************************************************/
 get_template_part('src-php/99_functions/_my_global_variables'); // グローバル変数
