@@ -199,15 +199,20 @@ $util-link-border-size: 3px;
 // wrapper
 // ------------------------------------------------------------
 .wrapper {
-	//
+// 
 }
 
 // ------------------------------------------------------------
 // container 
 // ------------------------------------------------------------
 .container {
-	// display: flex;
-	// justify-content: space-between;
+	padding-bottom: 100px;
+	@include mq(tab-only) {
+		padding-bottom: 60px;
+	}
+	@include mq(sp) {
+		padding-bottom: 40px;
+	}
 }
 
 // ------------------------------------------------------------

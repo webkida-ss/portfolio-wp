@@ -18,7 +18,7 @@
 		<!-------------------------------------------------- 
 		- メイン
 		---------------------------------------------------->
-		<div class="container">
+		<div class="inner container">
 			<main class="main">
 
 				<section class="single-work__">
