@@ -1,12 +1,8 @@
 .contact{ 
-    @extend %section-padding;
-
-    &__inner{
-    }
 
     // お問い合わせフォーム
     .mw_wp_form{
-        margin-top: 40px;
+        margin-top: 50px;
         $border-black: 1px solid $black;
         $border-blue: 1px solid $blue;
         .contact__list{
@@ -120,7 +116,7 @@
         // ボタン
         button{
             display: block;
-            margin: 0 auto;
+            margin: 40px auto 0;
             width: 200px;
             height: 40px;
             cursor: pointer;
