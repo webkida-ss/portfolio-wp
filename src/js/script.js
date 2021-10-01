@@ -27,7 +27,7 @@ jQuery(function () {
 	jQuery('a.header__nav--link').click(function () {
 		let href = jQuery(this)[0].href; // http://localhost:3000/#contact ：お問い合わせ押下時
 		if (href.indexOf('#') === -1) {
-			return false; // # を含んでいない場合は特に何もしない
+			return true; // # を含んでいない場合は遷移
 		}
 
 		let splitedHref = href.split('#');
