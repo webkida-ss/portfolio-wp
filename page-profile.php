@@ -27,7 +27,7 @@
 				</section>
 
 				<!-- スキル -->
-				<section id="profile" class="page-profile__skill">
+				<section id="skill" class="page-profile__skill">
 					<?php get_template_part('src-php/20_component/03_profile/_skill'); ?>
 				</section>
 
