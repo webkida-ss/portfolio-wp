@@ -8,11 +8,36 @@ jQuery(function () {
 	/*********************************************
 	 * スムーススクロール
 	 *********************************************/
-	jQuery('a[href^="#"]').click(function () {
-		let header = jQuery('.header').innerHeight();
-		let speed = 500;
-		let id = jQuery(this).attr("href"); // 遷移先ID（href属性）
-		let target = jQuery("#" == id ? "html" : id); // #のみだhtmlタグ（トップ）に戻る
+	let header = jQuery('.header').innerHeight();
+	let speed = 500;
+	var urlHash = location.hash; // ID取得
+	// 画面レンダリングされた際に実行：外部リンクからのクリック時
+	if (urlHash) {
+		jQuery('body,html').stop().scrollTop(0); // スクロールを0に戻す
+		setTimeout(function () { // ロード時の処理を待ち、時間差でスクロール実行
+			let position = jQuery(urlHash).offset().top - header;
+			jQuery('body,html').stop().animate({
+				scrollTop: position
+			}, speed);
+		}, 100);
+	}
+
+	// ヘッダーのリンクを押下
+	jQuery('a.header__nav--link').click(function () {
+		let href = jQuery(this)[0].href; // http://localhost:3000/#contact ：お問い合わせ押下時
+		if (href.indexOf('#') === -1) {
+			return false; // # を含んでいない場合は特に何もしない
+		}
+
+		let splitedHref = href.split('#');
+		let splitedlocationHref = location.href.split('#');
+		if (splitedHref[0] != splitedlocationHref[0]) { // location.href：http://localhost:3000/#service：#serviceにいるとき
+			return true; // ページが違う場合は遷移
+		}
+
+		// 同一ページ内スムーススクロール
+		let id = '#' + splitedHref[1]; // #IDを取得
+		let target = jQuery("#" == id ? "html" : id); // #のみならばhtmlタグ（トップ）に戻る
 		let position = jQuery(target).offset().top - header; // 固定ヘッダー分引く
 		// ヘッダーがfixedでない場合
 		if (jQuery(".header").css("position") !== "fixed") {
@@ -22,10 +47,8 @@ jQuery(function () {
 			position = 0;
 		}
 		jQuery("html, body").animate({
-				scrollTop: position
-			},
-			speed
-		);
+			scrollTop: position
+		}, speed);
 		return false;
 	});
 
