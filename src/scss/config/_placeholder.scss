@@ -40,3 +40,27 @@
 		content: '';
 	}
 }
+
+%brackets{
+	position: relative;
+	padding: 0.25em;
+	$border: dotted 1px $navy;
+	&::before, &::after { 
+		position: absolute;
+		display: inline-block;
+		content: '';
+		width: 8px;
+		height: 100%;
+		top: 0;
+		border-top: $border;
+		border-bottom: $border;
+	}
+	&::before {
+		border-left: $border;
+		left: 0;
+	}
+	&::after {
+		border-right: $border;
+		right: 0;
+	}
+}

@@ -28,8 +28,10 @@ $the_query = get_posts($args); // 投稿取得
 							<div class="work__img">
 								<?php the_post_thumbnail(); ?>
 							</div>
-							<p><?php the_title(); ?></p>
-							<p><?php the_field('work_subtitle'); ?></p>
+							<div class="work__content">
+								<p><?php the_title(); ?></p>
+								<p><?php the_field('work_subtitle'); ?></p>
+							</div>
 						</a>
 					</li><!-- /.work__item -->
 
