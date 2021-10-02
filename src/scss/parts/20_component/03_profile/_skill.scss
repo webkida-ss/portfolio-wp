@@ -1,9 +1,27 @@
 .skill{
     @extend %section-padding;
+	background-color: $light-blue;
     &__container{
         margin-top: 40px;
     }
+
+	&__content{
+		p{
+			&:not(:first-child){
+				margin-top: 5px;
+			}
+			font-size: 2rem;
+			font-weight: $font-weight-bold;
+			text-align: center;
+			font-style: italic;
+			letter-spacing: .1em;
+			color: $red-active;
+			text-shadow: -3px 2px 0 $white;
+		}
+	}
+
     &__list{
+		margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -55,7 +73,33 @@
             }
         }
         &--title{
+			margin-top: 10px;
             text-align: center;
+			font-style: italic;
+			
+			position: relative;
+			line-height: 1.4;
+			padding:0.25em ;
+			
+			$border: dotted 1px $navy;
+			&::before, &::after { 
+				position: absolute;
+				display: inline-block;
+				content: '';
+				width: 8px;
+				height: 100%;
+				top: 0;
+				border-top: $border;
+				border-bottom: $border;
+			}
+			&::before {
+				border-left: $border;
+				left: 0;
+			}
+			&::after {
+				border-right: $border;
+				right: 0;
+			}
         }
     }
 }

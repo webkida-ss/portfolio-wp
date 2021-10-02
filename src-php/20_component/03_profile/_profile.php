@@ -12,21 +12,8 @@
 			</div>
 		</div><!-- /.profile__imgs -->
 
-		<div class="profile__context">
-			<p class="profile__name">榊田 峻（さかきだ しゅん）</p>
-			<p class="profile__overview">
-				神奈川県出身、東京都在住<br>
-				2017年 大手SIer 入社 → 2020年 Web系ベンチャー 入社
-			</p>
-			<p class="profile__intro">
-				東京を拠点にWeb制作フリーランスとして活動しています。<br class="hidden-sp">
-				本業がJavaという言語のWebアプリ開発エンジニアのため、<br>
-				<span class="profile__bullets">ITに精通していること</span><br>
-				<span class="profile__bullets">保守性の高いコーディングが可能であること</span><br>
-				<span class="profile__bullets">技術的なキャッチアップが早いこと</span><br>
-				が強みです。<br>
-				フルリモートで働くことに慣れており、素早いレスポンスを心がけています。<br>
-			</p>
+		<div class="profile__content">
+			<?php the_content(); ?>
 		</div><!-- /.profile__context -->
 
 	</div>

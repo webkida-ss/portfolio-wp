@@ -57,7 +57,7 @@
 		}
 	}
 
-	&__context {
+	&__content {
 		margin-left: 50px;
 		letter-spacing: .8px;
 
@@ -67,34 +67,26 @@
 		@include mq(sp) {
 			font-size: 1.2rem;
 		}
-	}
-	&__name {
-		font-weight: $font-weight-bold;
-		font-size: 2.4rem;
+		h2{
+			font-weight: $font-weight-bold;
+			font-size: 2.4rem;
+			padding: 0.4em 0.5em;
+			background-color: $light-blue;
+			border-left: 3px solid $blue;
+			border-bottom: 3px solid $gray;
 
-		@include mq(tab) {
+			@include mq(tab) {
+				margin-top: 20px;
+				text-align: center;
+			}
+			@include mq(sp) {
+				font-size: 2rem;
+			}
+		}
+		p{
 			margin-top: 20px;
-			text-align: center;
-		}
-		@include mq(sp) {
-			font-size: 2rem;
-		}
-	}
-	&__overview {
-		margin-top: 20px;
-	}
-	&__intro {
-		margin-top: 20px;
-	}
-	&__bullets {
-		position: relative;
-		padding-left: 40px;
-		&::before {
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 10px;
-			content: '=>';
+			line-height: 1.4;
+			border-bottom: 3px solid $light-blue;
 		}
 	}
 }
