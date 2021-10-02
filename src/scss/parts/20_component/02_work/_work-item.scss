@@ -7,7 +7,7 @@
 		justify-content: space-between;
     }
 	&__mockup{
-		width: 50%;
+		width: 45%;
 		margin: 0 auto;
 	}
 	&__content{
@@ -25,14 +25,12 @@
 		}
 	}
 	&__list{
-		margin-top: 50px;
 
 		&--item{
 			display: flex;
-			
-			&:not(:first-child){
-				margin-top: 40px;
-			}
+			align-items: center;
+			padding: 40px 0;
+			border-bottom: 1px solid #b6d1d8;
 
 			dt,dd{
 				display: inline-block;
