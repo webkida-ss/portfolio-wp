@@ -27,14 +27,18 @@ $array_service = [
 			ご気軽にご相談ください！
 		</div>
 		<ul class="service__list">
-			<?php foreach ($array_service as $item) : ?>
-				<li class="service__item">
+			<?php for ($i = 0; $i < count($array_service); $i++) : ?>
+				<?php
+				$item = $array_service[$i];
+				$add_class = 'delay' . $i;
+				?>
+				<li class="service__item wow fadeIn <?php echo $add_class; ?>">
 					<div class="service__item--img">
 						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/service/' . $item[1]); ?>" alt="<?php echo esc_html($item[0]); ?>">
 					</div>
 					<p class="service__item--text"><?php echo esc_html($item[0]); ?></p>
 				</li>
-			<?php endforeach; ?>
+			<?php endfor; ?>
 		</ul>
 	</div>
 </div>

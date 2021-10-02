@@ -22,17 +22,17 @@
 			<div class="container">
 
 				<!-- プロフィール -->
-				<section id="profile" class="page-profile__profile">
+				<section id="profile" class="page-profile__profile wow fadeInUp">
 					<?php get_template_part('src-php/20_component/03_profile/_profile'); ?>
 				</section>
 
 				<!-- スキル -->
-				<section id="skill" class="page-profile__skill">
+				<section id="skill" class="page-profile__skill wow fadeInUp">
 					<?php get_template_part('src-php/20_component/03_profile/_skill'); ?>
 				</section>
 
 				<!-- お問い合わせ -->
-				<section id="contact" class="front-page__contact">
+				<section id="contact" class="front-page__contact wow fadeInUp">
 					<?php get_template_part('src-php/10_common/_contact'); ?>
 				</section>
 

@@ -90,5 +90,11 @@
                 font-size: 1rem;
             }
         }
+        // https://hacknote.jp/archives/917/
+        @for $i from 0 through 11 {
+            &.delay#{$i}{
+                animation-delay: #{$i * 0.25}s;
+            }
+        }
     }
 }

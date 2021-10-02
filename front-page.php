@@ -21,22 +21,22 @@
 			<div class="container">
 
 				<!-- トップ -->
-				<section id="top" class="front-page__top">
+				<section id="top" class="front-page__top wow fadeInUp">
 					<?php get_template_part('src-php/20_component/01_top/_top'); ?>
 				</section>
 
 				<!-- サービス -->
-				<section id="service" class="front-page__service">
+				<section id="service" class="front-page__service wow fadeInUp">
 					<?php get_template_part('src-php/20_component/01_top/_service'); ?>
 				</section>
 
 				<!-- 制作実績アーカイブ -->
-				<section id="work" class="front-page__work">
+				<section id="work" class="front-page__work wow fadeInUp">
 					<?php get_template_part('src-php/20_component/02_work/_work'); ?>
 				</section>
 
 				<!-- お問い合わせ -->
-				<section id="contact" class="front-page__contact">
+				<section id="contact" class="front-page__contact wow fadeInUp">
 					<?php get_template_part('src-php/10_common/_contact'); ?>
 				</section>
 
