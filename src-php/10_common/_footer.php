@@ -16,6 +16,9 @@
 				<li><a href="https://icons8.com/icon/rY6agKizO9eb/vue-js">Vue Js icon by Icons8</a></li>
 				<li><a href="https://icons8.com/icon/4VVL78edhbW9/adobe-xd">Adobe XD icon by Icons8</a></li>
 				<li><a href="https://icons8.com/icon/13677/adobe-photoshop">Adobe Photoshop icon by Icons8</a></li>
+				<li><a href="https://icons8.com/icon/3464/google-drive">Google Drive icon by Icons8</a></li>
+				<li><a href="https://icons8.com/icon/38488/line">LINE icon by Icons8</a></li>
+				<li><a href="https://icons8.com/icon/67668/instagram">Instagram icon by Icons8</a></li>
 			</ul>
 		</div><!-- /.footer__foreign-link -->
 

@@ -1,6 +1,19 @@
 <!-- データ -->
 <?php
-$arrat = [];
+$array_service = [
+	['コーディング', 'cording.png'],
+	['レスポンシブ対応', 'ipad.png'],
+	['デザイン', 'design.png'],
+	['サーバ契約', 'server.png'],
+	['ドメイン契約', 'domain.png'],
+	['セキュリティ対策', 'security.png'],
+	['運用保守', 'operation.png'],
+	['Google Workspace', 'googleworkspace.png'],
+	['SEO対策', 'seo.png'],
+	['MEO対策', 'meo.png'],
+	['公式LINE構築', 'line.png'],
+	['SNS運用', 'sns.png'],
+];
 ?>
 
 <!-- 本文 -->
@@ -14,9 +27,14 @@ $arrat = [];
 			ご気軽にご相談ください！
 		</div>
 		<ul class="service__list">
-			<li class="service__item">
-
-			</li>
+			<?php foreach ($array_service as $item) : ?>
+				<li class="service__item">
+					<div class="service__item--img">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/service/' . $item[1]); ?>" alt="<?php echo esc_html($item[0]); ?>">
+					</div>
+					<p class="service__item--text"><?php echo esc_html($item[0]); ?></p>
+				</li>
+			<?php endforeach; ?>
 		</ul>
 	</div>
 </div>
