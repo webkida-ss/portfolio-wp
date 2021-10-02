@@ -17,6 +17,12 @@
 			letter-spacing: .1em;
 			color: $red-active;
 			text-shadow: $text-shadow;
+			@include mq(tab-only) {
+				font-size: 1.6rem;
+			}
+			@include mq(sp) {
+				font-size: 1.4rem;
+			}
 		}
 	}
 
@@ -78,6 +84,12 @@
             text-align: center;
 			font-style: italic;
 			line-height: 1.4;
+			@include mq(tab-only) {
+				font-size: 1.4rem;
+			}
+			@include mq(sp) {
+				font-size: 1.2rem;
+			}
         }
     }
 }

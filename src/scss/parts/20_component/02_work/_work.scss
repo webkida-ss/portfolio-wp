@@ -108,6 +108,9 @@
 		@extend %brackets;
 		margin-top: 10px;
 		font-style: italic;
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
 	}
 
 	// ベーシック認証

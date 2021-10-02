@@ -164,8 +164,8 @@
 // ------------------------------------------------------------
 $util-link-width-pc: 200px;
 $util-link-height-pc: 60px;
-$util-link-width-sp: $util-link-width-pc;
-$util-link-height-sp: $util-link-height-pc;
+$util-link-width-sp: 140px;
+$util-link-height-sp: 40px;
 $util-link-border-size: 2px;
 .util {
 	// 共通リンクボタン
@@ -181,7 +181,7 @@ $util-link-border-size: 2px;
 		@include mq(sp) {
 			width: $util-link-width-sp;
 			height: $util-link-height-sp;
-			// font-size: *rem;
+			font-size: 1.4rem;
 			line-height: getLineHeightForBox($util-link-height-sp, $util-link-border-size);
 		}
 

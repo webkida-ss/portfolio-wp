@@ -63,6 +63,7 @@
 
 		@include mq(tab) {
 			margin: 0 auto;
+			font-size: 1.4rem;
 		}
 		@include mq(sp) {
 			font-size: 1.2rem;
@@ -78,9 +79,10 @@
 			@include mq(tab) {
 				margin-top: 20px;
 				text-align: center;
+				font-size: 2rem;
 			}
 			@include mq(sp) {
-				font-size: 2rem;
+				font-size: 1.6rem;
 			}
 		}
 		p{
