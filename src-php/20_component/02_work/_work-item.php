@@ -29,10 +29,15 @@
 				</dl><!-- /.work-item__list -->
 			</div><!-- /.work-item__content -->
 		</div><!-- /.work-item__wrapper -->
-		
+
 		<!-- 前後ボタン -->
-		<div class="work-item__before-after">
-			
+		<div class="work-item__links">
+			<div class="util-link work-item__link">
+				<?php previous_post_link('%link', '前へ'); ?>
+			</div>
+			<div class="util-link work-item__link">
+				<?php next_post_link('%link', '次へ'); ?>
+			</div>
 		</div>
 
 	</div>
