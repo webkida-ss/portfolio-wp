@@ -70,6 +70,9 @@ $line-height-pra-base: 1.6;// 文章の場合の基本設定
 // フォントサイズ
 $font-size-base: 1.6rem; // 基準サイズ
 
+// テキストデコレーション
+$text-shadow: -3px 2px 0 $white;
+
 // ブレイクポイント
 $max-width-sp: 559;
 $max-width-tab: 959;
