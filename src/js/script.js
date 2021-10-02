@@ -32,8 +32,6 @@ jQuery(function () {
 
 		let splitedHref = href.split('#');
 		let splitedlocationHref = location.href.split('#');
-		console.log(splitedHref);
-		console.log(splitedlocationHref);
 		if (splitedHref[0].replace(/\/$/g, '') != splitedlocationHref[0].replace(/\/$/g, '')) { // location.href：http://localhost:3000/#service：#serviceにいるとき
 			return true; // ページが違う場合は遷移
 		}
