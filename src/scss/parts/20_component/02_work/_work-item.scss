@@ -3,6 +3,12 @@
 	background-color: $light-blue;
 
     &__container{
+    }
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+    &__container{
 		display: flex;
 		justify-content: space-between;
     }
