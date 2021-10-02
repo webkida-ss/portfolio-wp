@@ -2,12 +2,12 @@
 <?php
 $array_skill = [
 	["HTML", "HTML", "html.png"],
-	["Sass", "Sass <br> (CSS)", "sass.png"],
-	["JavaScript", "JavaScript<br>(jQuery)", "javascript.png"],
+	["Sass", "Sass(CSS)", "sass.png"],
+	["JavaScript", "JavaScript(jQuery)", "javascript.png"],
 	["WordPress", "WordPress", "wordpress.png"],
 	["Git", "Git", "git.png"],
 	["gulp", "gulp", "gulp.png"],
-	["Java", "Java<br>(Spring)", "java.png"],
+	["Java", "Java(Spring)", "java.png"],
 	["Vue", "Vue", "vue.png"],
 	["Xd", "Xd", "xd.png"],
 	["Ps", "Ps", "photoshop.png"],
@@ -25,6 +25,7 @@ $array_skill = [
 					<div class="skill__item--img">
 						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/skill/' . $item[2]); ?>" alt="<?php echo $item[0]; ?>">
 					</div>
+					<p class="skill__item--title"><?php echo esc_html($item[1]); ?></p>
 				</li>
 			<?php endforeach; ?>
 		</ul>

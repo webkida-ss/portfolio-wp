@@ -1,7 +1,7 @@
 .skill{
     @extend %section-padding;
-    &__title{
-        // 
+    &__container{
+        margin-top: 40px;
     }
     &__list{
         display: flex;
@@ -9,12 +9,12 @@
     }
     &__item{
         @include mq(pc) {
-			$item-margin: 20px;
+			$item-margin: 40px;
 			$item-num: 5;
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上
 			&:not(:nth-child(-n+#{$item-num})) {
-				margin-top: 40px;
+				margin-top: 30px;
 			}
 			// 余白 - 左
 			&:not(:nth-child(#{$item-num}n+1)) {
@@ -27,7 +27,7 @@
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上
 			&:not(:nth-child(-n+#{$item-num})) {
-				margin-top: 40px;
+				margin-top: 25px;
 			}
 			// 余白 - 左
 			&:not(:nth-child(#{$item-num}n+1)) {
@@ -40,12 +40,22 @@
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上
 			&:not(:nth-child(-n+#{$item-num})) {
-				margin-top: 40px;
+				margin-top: 10px;
 			}
 			// 余白 - 左
 			&:not(:nth-child(#{$item-num}n+1)) {
 				margin-left: $item-margin;
 			}
 		}
+
+        &--img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        &--title{
+            text-align: center;
+        }
     }
 }
