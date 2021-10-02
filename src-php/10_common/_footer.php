@@ -14,6 +14,8 @@
 				<li><a href="https://icons8.com/icon/13679/java-coffee-cupのロゴ">Java Coffee Cupのロゴ icon by Icons8</a></li>
 				<li><a href="https://icons8.com/icon/GX4iT6biRXL-/gulp">Gulp icon by Icons8</a></li>
 				<li><a href="https://icons8.com/icon/rY6agKizO9eb/vue-js">Vue Js icon by Icons8</a></li>
+				<li><a href="https://icons8.com/icon/4VVL78edhbW9/adobe-xd">Adobe XD icon by Icons8</a></li>
+				<li><a href="https://icons8.com/icon/13677/adobe-photoshop">Adobe Photoshop icon by Icons8</a></li>
 			</ul>
 		</div><!-- /.footer__foreign-link -->
 
