@@ -39,7 +39,7 @@
         }
         @include mq(tab-only) {
             $item-margin: 30px;
-            $item-num: 4;
+            $item-num: 3;
             width: getCardWith($item-margin,$item-num);
             // 余白 - 上
             &:not(:nth-child(-n+#{$item-num})) {
