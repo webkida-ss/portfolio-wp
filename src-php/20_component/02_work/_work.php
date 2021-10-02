@@ -47,6 +47,7 @@ $the_query = get_posts($args); // 投稿取得
 			パスワード： <span class="work__password" id="js-password"><?php echo $password; ?></span>
 		</div><!-- /.work__basic -->
 
+		<!-- もっと見る -->
 		<?php if (!is_post_type_archive()) : ?>
 			<div class="util-link work__more">
 				<a href="<?php echo esc_url(home_url()) . '/work'; ?>">もっと見る</a>

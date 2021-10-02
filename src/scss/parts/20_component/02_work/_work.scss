@@ -8,6 +8,9 @@
     &__list{
         display: flex;
         flex-wrap: wrap;
+		@include mq(sp) {
+			display: block;
+		}
     }
     &__item{
         cursor: pointer;
@@ -42,16 +45,9 @@
 			}
 		}
 		@include mq(sp) {
-            $item-margin-sp: 10px;
-            $item-num-sp: 1;
-			width: getCardWith($item-margin-sp,$item-num-sp);
-			font-size: 1.2rem;
-            // 始めの行以外はmtつける
-            &:not(:nth-child(-n+#{$item-num-sp})) {
-                margin-top: $item-margin-sp;
-            }            
-			&:not(:nth-child(#{$item-num-sp}n+1)) {
-				margin-left: $item-margin-sp;
+			width: 100%;
+			&:not(:first-child){
+				margin-top: 20px;
 			}
 		}
         // ホバー時に
