@@ -1,5 +1,6 @@
 .skill{
     @extend %section-padding;
+	background-color: $light-blue;
     &__container{
         margin-top: 40px;
     }
