@@ -1,4 +1,8 @@
 <!-- データ -->
+<?php 
+global $userid;
+global $password;
+?>
 
 <!-- 本文 -->
 <div class="work-item">
@@ -34,8 +38,8 @@
 		<?php if (get_field('work_basic') == 1) : ?>
 			<div class="work__basic">
 				Basic認証には以下を入力してください。<br>
-				ユーザID： <span class="work__userid" id="js-userid">webkidawork</span>
-				パスワード： <span class="work__password" id="js-password">8pCtk0FFmQnOE</span>
+				ユーザID： <span class="work__userid" id="js-userid"><?php echo $userid; ?></span>
+				パスワード： <span class="work__password" id="js-password"><?php echo $password; ?></span>
 			</div><!-- /.work__basic -->
 		<?php endif; ?>
 

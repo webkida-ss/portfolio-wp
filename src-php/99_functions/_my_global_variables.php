@@ -6,7 +6,9 @@
 
 function my_global()
 {
-	// global $param;
-	// $param = 1;
+	global $userid;
+	$userid = 'webkidawork';
+	global $password;
+	$password = '8pCtk0FFmQnOE';
 }
 add_action('after_setup_theme', 'my_global');
