@@ -10,7 +10,7 @@ $array_skill = [
 	["Java", "Java(Spring)", "java.png"],
 	["Vue", "Vue", "vue.png"],
 	["Xd", "Xd", "xd.png"],
-	["Ps", "Ps", "photoshop.png"],
+	["Ps", "PhotoShop", "photoshop.png"],
 ];
 ?>
 
