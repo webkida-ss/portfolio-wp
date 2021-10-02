@@ -107,6 +107,13 @@
 			content: 'CLICK';
 		}
     }
+	// 
+	&__content{
+		@extend %brackets;
+		margin-top: 10px;
+		font-style: italic;
+	}
+
 	// ベーシック認証
 	&__basic {
 		margin-top: 20px;
