@@ -38,7 +38,7 @@
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上
 			&:not(:nth-child(-n+#{$item-num})) {
-				margin-top: 30px;
+				margin-top: $item-margin;
 			}
 			// 余白 - 左
 			&:not(:nth-child(#{$item-num}n+1)) {
@@ -46,12 +46,12 @@
 			}
 		}
         @include mq(tab-only) {
-			$item-margin: 15px;
-			$item-num: 4;
+			$item-margin: 20px;
+			$item-num: 5;
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上
 			&:not(:nth-child(-n+#{$item-num})) {
-				margin-top: 25px;
+				margin-top: $item-margin;
 			}
 			// 余白 - 左
 			&:not(:nth-child(#{$item-num}n+1)) {
@@ -64,7 +64,7 @@
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上
 			&:not(:nth-child(-n+#{$item-num})) {
-				margin-top: 10px;
+				margin-top: $item-margin;
 			}
 			// 余白 - 左
 			&:not(:nth-child(#{$item-num}n+1)) {

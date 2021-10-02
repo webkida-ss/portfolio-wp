@@ -82,7 +82,29 @@
         }
         &--text{
             font-style: italic;
-            padding-left: 10px;
+            margin-left: 10px;
+            
+            position: relative;
+            &::before,&::after{
+                content: '';
+                display: inline-block;
+                position: absolute;
+            }
+            &::before{
+                width: calc(100% + 6px);
+                border-bottom: 2px solid $blue;
+                bottom: -5px;
+            }
+            &::after{
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 4px 8px 4px;
+                border-color: transparent transparent $blue transparent;
+                bottom: -4px;
+                right: -6px;
+            }
+
             @include mq(tab-only) {
                 font-size: 1.4rem;
             }
