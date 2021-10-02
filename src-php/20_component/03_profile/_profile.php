@@ -26,6 +26,7 @@
 				<span class="profile__bullets">技術的なキャッチアップが早いこと</span><br>
 				が強みです。<br>
 				フルリモートで働くことに慣れており、素早いレスポンスを心がけています。<br>
+			</p>
 		</div><!-- /.profile__context -->
 
 	</div>

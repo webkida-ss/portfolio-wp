@@ -1,6 +1,100 @@
-.profile{
-    @extend %section-padding;
-    &__title{
-        // 
-    }
+.profile {
+	@extend %section-padding;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 40px;
+
+		@include mq(tab) {
+			display: block;
+		}
+	}
+	&__imgs {
+		@include mq(tab) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__icon {
+		width: 200px;
+		height: 200px;
+
+		@include mq(tab) {
+			// margin-right: auto;
+		}
+		@include mq(sp) {
+			width: 140px;
+			height: 140px;
+		}
+		img {
+			height: 100%;
+			border-radius: 50%;
+			box-shadow: 0px 0px 10px 2px rgba(2,174,218,.28);
+
+			object-fit: cover;
+		}
+	}
+	&__sns {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+
+		@include mq(tab) {
+			margin: 0 0 0 40px;
+		}
+		a {
+			width: 50px;
+			transition: all .5s ease 0s;
+			&:hover {
+				opacity: .6;
+			}
+			&:first-child {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&__context {
+		margin-left: 50px;
+		letter-spacing: .8px;
+
+		@include mq(tab) {
+			margin: 0 auto;
+		}
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
+	}
+	&__name {
+		font-weight: $font-weight-bold;
+		font-size: 2.4rem;
+
+		@include mq(tab) {
+			margin-top: 20px;
+			text-align: center;
+		}
+		@include mq(sp) {
+			font-size: 2rem;
+		}
+	}
+	&__overview {
+		margin-top: 20px;
+	}
+	&__intro {
+		margin-top: 20px;
+	}
+	&__bullets {
+		position: relative;
+		padding-left: 40px;
+		&::before {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 10px;
+			content: '=>';
+		}
+	}
 }
