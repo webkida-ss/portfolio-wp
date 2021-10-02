@@ -1,4 +1,4 @@
-.works{
+.work{
 	@extend %section-padding;
 	background-color: $light-blue;
 
@@ -56,7 +56,7 @@
 		}
         // ホバー時に
         &:hover{
-            .works__img{
+            .work__img{
                 &::before {
 					opacity: .7;
 				}
@@ -91,7 +91,7 @@
 		&::before {
 			top: 0;
 			left: 0;
-			z-index: map-get($layer, works-item-bg);
+			z-index: map-get($layer, work-item-bg);
 			width: 100%;
 			height: 100%;
 			background: $black;
@@ -100,7 +100,7 @@
 		&::after {
 			top: 50%;
 			left: 50%;
-			z-index: map-get($layer, works-item-bg-text);
+			z-index: map-get($layer, work-item-bg-text);
 			transform: translate(-50%,-50%);
 			color: $white;
 			font-weight: $font-weight-bold;

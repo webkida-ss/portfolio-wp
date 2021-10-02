@@ -31,8 +31,8 @@
 				</section>
 
 				<!-- 制作実績アーカイブ -->
-				<section id="works" class="front-page__work">
-					<?php get_template_part('src-php/20_component/02_work/_works'); ?>
+				<section id="work" class="front-page__work">
+					<?php get_template_part('src-php/20_component/02_work/_work'); ?>
 				</section>
 
 				<!-- お問い合わせ -->
