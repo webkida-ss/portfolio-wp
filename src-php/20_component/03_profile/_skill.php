@@ -1,16 +1,16 @@
 <!-- データ -->
 <?php
 $array = [
-	["HTML","HTML","html.png"],
-	["Sass","Sass <br> (CSS)","sass.png"],
-	["JavaScript","JavaScript<br>(jQuery)",".png"],
-	["WordPress","WordPress","wordpress.png"],
-	["Git","Git","git.png"],
-	["gulp","gulp","gulp.png"],
-	["Java","Java<br>(Spring)","java.png"],
-	["Vue","Vue","vue.png"],
-	["","",".png"],
-	["","",".png"],
+	["HTML", "HTML", "html.png"],
+	["Sass", "Sass <br> (CSS)", "sass.png"],
+	["JavaScript", "JavaScript<br>(jQuery)", ".png"],
+	["WordPress", "WordPress", "wordpress.png"],
+	["Git", "Git", "git.png"],
+	["gulp", "gulp", "gulp.png"],
+	["Java", "Java<br>(Spring)", "java.png"],
+	["Vue", "Vue", "vue.png"],
+	["Xd", "Xd", "xd.png"],
+	["Ps", "Ps", "photoshop.png"],
 ];
 ?>
 
