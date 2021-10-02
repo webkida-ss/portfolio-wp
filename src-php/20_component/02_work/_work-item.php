@@ -1,5 +1,5 @@
 <!-- データ -->
-<?php 
+<?php
 global $userid;
 global $password;
 ?>
@@ -46,10 +46,10 @@ global $password;
 		<!-- 前後ボタン -->
 		<div class="work-item__links">
 			<div class="util-link work-item__link">
-				<?php previous_post_link('%link', '前へ'); ?>
+				<?php previous_post_link('%link', '前の制作実績'); ?>
 			</div>
 			<div class="util-link work-item__link">
-				<?php next_post_link('%link', '次へ'); ?>
+				<?php next_post_link('%link', '次の制作実績'); ?>
 			</div>
 		</div>
 
