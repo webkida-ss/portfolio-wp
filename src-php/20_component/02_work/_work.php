@@ -1,5 +1,7 @@
 <!-- データ -->
 <?php
+global $userid;
+global $password;
 $post_num = (is_int($args)) ? $args : 6; // 表示件数：デフォルト6件
 $args = array(
 	'post_type' => 'work', // 投稿タイプ：制作実績
@@ -39,8 +41,8 @@ $the_query = get_posts($args); // 投稿取得
 		<!-- ベーシック認証 -->
 		<div class="work__basic">
 			Basic認証には以下を入力してください。<br>
-			ユーザID： <span class="work__userid" id="js-userid">webkidawork</span>
-			パスワード： <span class="work__password" id="js-password">8pCtk0FFmQnOE</span>
+			ユーザID： <span class="work__userid" id="js-userid"><?php echo $userid; ?></span>
+			パスワード： <span class="work__password" id="js-password"><?php echo $password; ?></span>
 		</div><!-- /.work__basic -->
 
 		<?php if (!is_post_type_archive()) : ?>
