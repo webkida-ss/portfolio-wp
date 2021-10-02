@@ -4,6 +4,22 @@
     &__container{
         margin-top: 40px;
     }
+
+	&__content{
+		p{
+			&:not(:first-child){
+				margin-top: 5px;
+			}
+			font-size: 2rem;
+			font-weight: $font-weight-bold;
+			text-align: center;
+			font-style: italic;
+			letter-spacing: .1em;
+			color: $red-active;
+			text-shadow: -3px 2px 0 $white;
+		}
+	}
+
     &__list{
 		margin-top: 40px;
         display: flex;

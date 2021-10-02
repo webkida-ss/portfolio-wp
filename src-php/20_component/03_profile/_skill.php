@@ -7,10 +7,10 @@ $array_skill = [
 	["WordPress", "WordPress", "wordpress.png"],
 	["Git", "Git", "git.png"],
 	["gulp", "gulp", "gulp.png"],
-	["Java", "Java(Spring)", "java.png"],
-	["Vue", "Vue", "vue.png"],
 	["Xd", "Xd", "xd.png"],
 	["Ps", "PhotoShop", "photoshop.png"],
+	["Java", "Java(Spring)", "java.png"],
+	["Vue", "Vue", "vue.png"],
 ];
 ?>
 
@@ -21,7 +21,10 @@ $array_skill = [
 
 		<!-- スキル概要 -->
 		<div class="skill__content">
-			<?php the_field('profile_skill'); ?>
+			<p>コーディング業務全般が好き、得意！</p>
+			<p>保守性の高いコーディングが得意！</p>
+			<p>デザインツールからのコーディング可能！</p>
+			<p>アプリ開発も可能！</p>
 		</div><!-- /.skill__content -->
 
 		<!-- スキル一覧 -->
