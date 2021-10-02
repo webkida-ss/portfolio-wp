@@ -21,7 +21,7 @@
 			<div class="container">
 
 				<section class="archive-work__">
-					<?php get_template_part('src-php/20_component/02_work/_works', null, -1); ?>
+					<?php get_template_part('src-php/20_component/02_work/_work', null, -1); ?>
 				</section>
 
 				<!-- お問い合わせ -->
