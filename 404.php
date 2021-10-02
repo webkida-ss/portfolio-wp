@@ -21,7 +21,7 @@
 		<main>
 			<div class="inner container">
 
-				<section class="not-found__">
+				<section class="not-found">
 					該当のページはございません。
 				</section>
 

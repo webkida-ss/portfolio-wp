@@ -20,7 +20,8 @@
 		<main>
 			<div class="container">
 
-				<section class="archive-work__">
+				<!-- 制作実績一覧 -->
+				<section class="archive-work__work">
 					<?php get_template_part('src-php/20_component/02_work/_work', null, -1); ?>
 				</section>
 
