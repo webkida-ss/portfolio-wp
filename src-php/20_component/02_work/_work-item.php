@@ -11,7 +11,7 @@
 
 		<!-- 内容 -->
 		<div class="work-item__content">
-			<h2 class="work-item__title"><?php the_title(); ?></h2>
+			<h2 class="work-item__title"><span><?php the_title(); ?></span></h2>
 			<dl class="work-item__list">
 				<div class="work-item__list--item">
 					<dt>サイト概要</dt>
