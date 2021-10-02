@@ -19,6 +19,12 @@ $array_skill = [
 	<h2 class="section-title">スキル<span>skill</span></h2>
 	<div class="inner skill__container">
 
+		<!-- スキル概要 -->
+		<div class="skill__content">
+			<?php the_field('profile_skill'); ?>
+		</div><!-- /.skill__content -->
+
+		<!-- スキル一覧 -->
 		<ul class="skill__list">
 			<?php foreach ($array_skill as $item) : ?>
 				<li class="skill__item">
