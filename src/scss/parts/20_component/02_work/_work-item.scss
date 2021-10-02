@@ -77,6 +77,7 @@
 
 		&--item{
 			display: flex;
+			justify-content: space-between;
 			align-items: center;
 			padding: 30px 0;
 			border-bottom: 1px solid #b6d1d8;
@@ -89,7 +90,9 @@
 				font-size: 2rem;
 			}
 			dd{
+				width: getMinus100Percent(120px);
 				font-size: 1.6rem;
+				line-height: 1.4;
 				a{
 					color: $blue;
 					&:hover {
