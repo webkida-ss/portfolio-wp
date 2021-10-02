@@ -1,6 +1,12 @@
 .service{
     @extend %section-padding;
-    &__title{
-        // 
+    &__container{
+        margin-top: 40px;
+    }
+    &__lead{
+        text-align: center;
+        line-height: 1.6;
+        text-shadow: $text-shadow;
+        color: $red-active;
     }
 }
