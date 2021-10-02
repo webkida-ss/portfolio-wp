@@ -21,8 +21,8 @@
 		<main>
 			<div class="container">
 
-				<section class="single-work__">
-					<!-- <?php get_template_part('src-php/20_component//'); ?> -->
+				<section class="single-work__work-item">
+					<?php get_template_part('src-php/20_component/02_work/_work-item'); ?>
 				</section>
 
 				<!-- お問い合わせ -->

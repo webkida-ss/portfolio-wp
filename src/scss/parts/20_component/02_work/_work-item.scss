@@ -1,0 +1,58 @@
+.work-item{
+	@extend %section-padding;
+	background-color: $light-blue;
+
+    &__container{
+		display: flex;
+		justify-content: space-between;
+    }
+	&__mockup{
+		width: 50%;
+		margin: 0 auto;
+	}
+	&__content{
+		width: 45%;
+	}
+	&__title{
+		margin-top: 50px;
+		text-align: center;
+		font-size: 3rem;
+		@include mq(tab-only) {
+			font-size: 2rem;
+		}
+		@include mq(sp) {
+			font-size: 1.6rem;
+		}
+	}
+	&__list{
+		margin-top: 50px;
+
+		&--item{
+			display: flex;
+			
+			&:not(:first-child){
+				margin-top: 40px;
+			}
+
+			dt,dd{
+				display: inline-block;
+			}
+			dt{
+				width: 120px;
+				font-size: 2rem;
+			}
+			dd{
+				font-size: 1.6rem;
+				a{
+					color: $blue;
+					&:hover {
+						opacity: $hover-opacity;
+					}
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+
+}
