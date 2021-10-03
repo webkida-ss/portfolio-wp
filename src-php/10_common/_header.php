@@ -33,7 +33,7 @@
 					<a href="<?php echo esc_url(home_url()); ?>/work" class="header__nav--link js-drawer-item">制作実績</a>
 				</li>
 				<li class="header__nav--item">
-					<a href="<?php echo esc_url(home_url()); ?>/#contact" class="header__nav--link js-drawer-item">お問い合わせ</a>
+					<a href="#contact" class="header__nav--link js-drawer-item">お問い合わせ</a>
 				</li>
 			</ul>
 		</nav>
