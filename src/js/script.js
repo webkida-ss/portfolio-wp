@@ -6,18 +6,6 @@ jQuery(function () {
 	new WOW().init();
 
 	/*********************************************
-	 * WOW hover時のクラス
-	 *********************************************/
-	jQuery('#js-twitter').add('#js-github').hover(
-		function () {
-			jQuery(this).addClass('animated pulse');
-		},
-		function () {
-			jQuery(this).removeClass('animated pulse');
-		}
-	);
-
-	/*********************************************
 	 * スムーススクロール
 	 *********************************************/
 	let header = jQuery('.header').innerHeight();
