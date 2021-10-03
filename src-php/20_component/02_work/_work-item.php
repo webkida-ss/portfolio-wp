@@ -46,10 +46,10 @@ global $password;
 		<!-- 前後ボタン -->
 		<div class="work-item__links">
 			<div class="util-link work-item__link">
-				<?php previous_post_link('%link', '前の制作実績'); ?>
+				<?php previous_post_link('%link', '前の制作詳細'); ?>
 			</div>
 			<div class="util-link work-item__link">
-				<?php next_post_link('%link', '次の制作実績'); ?>
+				<?php next_post_link('%link', '次の制作詳細'); ?>
 			</div>
 		</div>
 

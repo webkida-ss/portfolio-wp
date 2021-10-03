@@ -60,7 +60,7 @@
 		}
         @include mq(sp) {
 			$item-margin: 10px;
-			$item-num: 2;
+			$item-num: 4;
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上
 			&:not(:nth-child(-n+#{$item-num})) {
