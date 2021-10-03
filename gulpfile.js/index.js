@@ -113,7 +113,7 @@ function css() {
 
 // JavaScript =============================================================================
 function js() {
-	return src(`${path.src}/js/**/*.js`, {
+	return src(`${path.src}/js/script.js`, {
 			sourcemaps: true
 		})
 		.pipe(
