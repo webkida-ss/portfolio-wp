@@ -1,6 +1,6 @@
 <!-- お問い合わせページ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
 	<?php get_header(); ?>
