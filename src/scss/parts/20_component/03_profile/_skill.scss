@@ -59,7 +59,7 @@
 			}
 		}
         @include mq(sp) {
-			$item-margin: 15px;
+			$item-margin: 10px;
 			$item-num: 4;
 			width: getCardWith($item-margin,$item-num);
 			// 余白 - 上

@@ -1,16 +1,16 @@
 <!-- データ -->
 <?php
 $array_skill = [
-	["HTML", "HTML", "html.png"],
-	["Sass", "Sass(CSS)", "sass.png"],
-	["JavaScript", "JavaScript(jQuery)", "javascript.png"],
-	["WordPress", "WordPress", "wordpress.png"],
-	["Git", "Git", "git.png"],
-	["gulp", "gulp", "gulp.png"],
-	["Xd", "Xd", "xd.png"],
-	["Ps", "PhotoShop", "photoshop.png"],
-	["Java", "Java(Spring)", "java.png"],
-	["Vue", "Vue", "vue.png"],
+	["HTML", "HTML", "", "html.png"],
+	["Sass", "Sass", "(CSS)", "sass.png"],
+	["JavaScript", "JavaScript", "(jQuery)", "javascript.png"],
+	["WordPress", "WordPress", "", "wordpress.png"],
+	["Git", "Git", "", "git.png"],
+	["gulp", "gulp", "", "gulp.png"],
+	["Xd", "Xd", "", "xd.png"],
+	["Ps", "PhotoShop", "", "photoshop.png"],
+	["Java", "Java", "(Spring)", "java.png"],
+	["Vue", "Vue", "", "vue.png"],
 ];
 ?>
 
@@ -32,9 +32,15 @@ $array_skill = [
 			<?php foreach ($array_skill as $item) : ?>
 				<li class="skill__item">
 					<div class="skill__item--img">
-						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/skill/' . $item[2]); ?>" alt="<?php echo $item[0]; ?>">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/skill/' . $item[3]); ?>" alt="<?php echo $item[0]; ?>">
 					</div>
-					<p class="skill__item--title"><?php echo esc_html($item[1]); ?></p>
+					<p class="skill__item--title">
+						<?php echo esc_html($item[1]);
+						if (!empty($item[2])) : ?>
+							<br>
+						<?php echo esc_html($item[2]);
+						endif; ?>
+					</p>
 				</li>
 			<?php endforeach; ?>
 		</ul>
