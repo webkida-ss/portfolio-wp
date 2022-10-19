@@ -117,6 +117,16 @@ function remove_menus()
 add_action('admin_menu', 'remove_menus');
 
 /************************************************************************
+ * WordPress・テーマ・プラグインの更新メールなし
+ ************************************************************************/
+//「Wordpress本体」の自動更新メール通知を停止する
+add_filter('auto_core_update_send_email', '__return_false');
+// 「プラグイン」の自動更新メール通知を停止する
+add_filter('auto_plugin_update_send_email', '__return_false');
+// 「テーマ」の自動更新メール通知を停止する
+add_filter('auto_theme_update_send_email', '__return_false');
+
+/************************************************************************
  * ファイル取込み
  ************************************************************************/
 get_template_part('src-php/99_functions/_my_global_variables'); // グローバル変数
